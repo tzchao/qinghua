@@ -1,0 +1,41 @@
+<div class="cont-right">
+    <!--发展历程-->
+    <div class="column-tit"><i></i>{$cate.name}</div>
+    <div class="content">
+      <h3 style="color: #46228e; font-size: 18px; line-height: 32px">{:L('_L_EVENTS')}</h3>
+     <if condition="empty($cate['description'])">{:L('_L_CATNODES')}</if>{$cate.description|nl2br=###}
+    </div>
+    <div id="container" class="content clearfix">
+      <div id="timeline">
+        <div class="shijian">
+          <b class="fg t"></b>
+          <b class="fg b"></b>
+          <ul id="dates">
+          	<other:devel cid="$cid">
+          	</other:devel>
+          	<volist name="devel" id="v">
+          		 <li><a href="#{$key}">{$key}</a></li>
+          	</volist>
+          </ul>
+        </div>
+        <div class="box">
+          <ul id="issues">
+
+          	<other:devel cid="$cid">
+          		<volist name="devel" id="v">
+		            <li id="{$key}" >
+		            	<volist name="v" id="vv">
+		            		<p style="color:{$vv.color}" <if condition="$vv.flag & 64"><else />onclick="location.href='<php> echo get_content_url($vv[id],$cid,1);</php>'</if>"><span>{$vv.publishtime|date='Y.m.d',###}</span>{$vv.title}</p>
+		            	</volist>
+		            </li>
+	            </volist>
+            </other:devel>
+            
+          </ul>
+        </div>
+        <a href="#" id="next"></a>
+        <a href="#" id="prev"></a>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>

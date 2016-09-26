@@ -1,0 +1,168 @@
+
+.credit{text-align:center;padding: 20px 0 100px;font-size:10px;}
+.demotips{margin:0 auto;text-align:center;font-size:25px;}
+.demotips a{margin:0 10px;}
+/*-核心代码-*/
+/* Menu style */
+ 	#timeline {
+		width: 100%;
+		height: 650px;
+		margin: 20px auto;
+		position: relative;
+	}
+    .shijian{
+      height: 100%; width: 120px; float: left; overflow: hidden;
+      background: url('../qh_images/dot.gif') 25px center no-repeat #f5f5f5;
+      position: relative;
+    }
+    .shijian .fg{
+      display: block;
+      width: 100%;
+      height: 60px;
+      background-color: #f5f5f5;
+      position: absolute;
+      left: 0;
+    }
+    .shijian .t{top: 0}
+    .shijian .b{bottom: 0}
+
+		#dates {
+			width: 100%;
+			height: 600px;
+			overflow: hidden;
+			float: left;
+		}
+			#dates li {
+				list-style: none;
+				width: 100px;
+				height: 70px;
+				line-height: 100px;
+              margin-left: 20px;
+              overflow: hidden;
+				font-size: 24px;
+				padding-left: 20px;
+				background: url('../qh_images/biggerdot.png') left center no-repeat;
+			}
+				#dates a {
+					line-height: 28px;
+                  display: block;
+                  width: 63px;
+                  border: 1px solid #ccc;
+                  border-radius: 9px;
+                  font-size: 18px;
+                  text-align: center;
+                  margin-top: 20px;
+				}
+				#dates .selected {
+			        color: #fff;
+                  background-color: #46228e;
+				}
+
+                #timeline .box{
+                  width: 722px;
+                  height: 100%;
+                  overflow: hidden;
+                  float: left;
+					border: 1px solid #ccc;
+
+				}
+              #issues {
+                background-color: #fff;
+                overflow: hidden;
+              }
+			#issues li {
+				width: 100%;
+				height: 650px;
+				list-style: none;
+               overflow: hidden;
+
+              /*border: 1px solid #ccc;*/
+              /*display: none;*/
+              /*border-top: 1px solid #ccc;*/
+
+			}
+#issues li p{
+  position: relative;
+  padding-left: 105px;
+}
+#issues li p span{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 105px;
+  line-height: 20px;
+}
+#issues li.selected{
+              display: block;
+            }
+				#issues li img {
+					margin: 60px 0 0 70px;
+				}
+				#issues li h1 {
+					color: #ffcc00;
+					font-size: 48px;
+					text-align: center;
+					text-shadow: #000 1px 1px 2px;
+				}
+				#issues li p {
+					font-size: 14px;
+					margin: 9px 25px;
+					font-weight: normal;
+					line-height: 22px;
+				}
+		
+
+		
+		#next,
+		#prev {
+			position: absolute;
+			left: 28px;
+			width: 60px;
+			height: 25px;
+			background-position: 0 -25px;
+			background-repeat: no-repeat;
+			overflow: hidden;
+		}
+			#next:hover,
+			#prev:hover {
+				background-position:  0 0;
+			}
+			#next {
+				bottom: 15px;
+				background-image: url('../qh_images/next_v.png');
+			}
+			#prev {
+				top: 15px;
+				background-image: url('../qh_images/prev_v.png');
+			}
+				#next.disabled,
+				#prev.disabled {
+					opacity: 0.2;
+				}
+
+
+@media (max-width: 1199px) {
+  #timeline .box{width: 577px}
+}
+@media (max-width: 991px) {
+  .shijian{width: 100px; background-position: 15px center}
+  #dates li{margin-left: 10px}
+  #dates a{font-size: 16px}
+  #timeline{height: 550px}
+  #dates li{width:90px; height: 60px}
+  #dates a{margin-top: 16px; width: 60px}
+  #next, #prev{left: 20px}
+  #timeline .box{width: 434px; height: 650px}
+}
+@media (max-width: 767px) {
+	#timeline{height: 235px}
+	.shijian{width: 100%;background-position: 25px center;}
+	#timeline .box{width: 100%;}
+	#next, #prev{left: 50%; margin-left: -30px}
+	#dates li{width: 100%; height: 50px; margin-left: 0; padding: 0 45px 0 45px; background-position: 20px center}
+	#dates a{width:100%; margin-top: 11px}
+	.shijian .fg{height: 40px}
+	#prev{top: 10px}
+	#next{bottom: 10px}
+}

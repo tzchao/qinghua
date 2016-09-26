@@ -1,0 +1,19 @@
+<div class="cont-right">
+	<div class="column-tit"><i></i>{$cate.name}</div>
+    <div class="content">
+      <p></p>
+      <if condition="empty($cate['description'])">{:L('_L_CATNODES')}</if>{$cate.description|nl2br=###}
+      <p></p>
+    </div>
+	<div class="news-project">
+	      <div class="tit">
+	        <span>{:L('_L_XMDT')}</span>
+	      </div>
+	      <ul>
+	      	<qiqi:list typeid="$cid" pagesize="15">
+	        <li><a href="{$list.url}"><i></i><h1>{$list.title}</h1><span>{$list.publishtime|date="Y-m-d",###}</span></a></li>
+	      	</qiqi:list>
+	      </ul>
+	 		{$page}
+	</div>
+</div>

@@ -1,0 +1,57 @@
+<!-- 导航 -->
+<nav class="navbar">
+    <div class="container navbarbor">
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav">
+                <li class="erji-li">
+                  <a href="<qiqi:siteurl />" <if condition="empty($cid)">class="on"</if>>{:L('_L_WEBNAME')}</a>
+                </li>
+                <php>  $pid = getTopCatid($cid);</php>
+                <qiqi:catlist typeid='0' flag='1'>
+                	<if condition="count($catlist['child'][0]['child']) EQ 0">
+	                	<li class="erji-li">
+
+	                		<a href="<if condition="$catlist['id'] EQ 15">{:U('List/index',array('cid'=>'29'))}<elseif condition="$catlist['id'] EQ 18" />{:U('List/index',array('cid'=>'45'))}<else />{$catlist.url}</if>" <if condition="$pid EQ $catlist['id']">class="on"</if> <eq name="catlist.name" value="系友风采">target="__blank"</eq>>{$catlist.name}</a>
+	                			<if condition="count($catlist['child']) GT 0">
+			                		<div class="erji-box">
+			                			<div class=""></div>
+			                     		<div class="menu-sec">
+				                			<volist name='catlist["child"]' id='v'>
+				                				 <a href="{$v|get_url}">{$v.name}</a>
+				                			</volist>
+			                			</div>
+											<volist name='catlist["child"]' id='v' key="k">
+												<div class="erjiDesc" style="display: <eq name="k" value="1">block<else />none</eq>">
+													<div class="desc">
+														<p class="indent-2"><if condition="empty($v['description'])">{:L('_L_CATNODES')}<else />{$v.description|nl2br=###}</if></p>
+													</div>
+													<div class="pic">
+														<img src="<if condition="empty($v['catpic'])">__PUBLIC__/qh_images/nopic_len.png<else />{$v.catpic}</if>" class="img-responsive" alt="">
+													</div>
+												</div>
+											</volist>
+
+									</div>
+			                	</if>
+	                	</li>
+	                <else />
+	                	<li class="erji-li sanji-li">
+		                    <a href="<if condition="$catlist['id'] EQ 7">{:U('List/index',array('cid'=>'8'))}<else />{$catlist.url}</if>" <if condition="$pid EQ $catlist['id']">class="on"</if>>{$catlist.name}</a>
+		                    <div class="erji-box">
+		                    	<volist name='catlist["child"]' id='v'>
+			                      <dl>
+			                        <dt><a href="{$v|get_url}">{$v.name}</a></dt>
+			                        	<volist name='v["child"]' id='v2'>
+			                        		<dd><a href="{$v2|get_url}">{$v2.name}</a></dd>
+			                        	</volist>
+			                      </dl>
+		                      	</volist>
+		                    </div>
+		                </li>
+	                </if>
+                </qiqi:catlist>
+                <div class="pull-right menua hidden-xs"><a href="http://glf.qiqikeji.com/qinghuaen/" class="eng">EN</a><a href="http://glf.qiqikeji.com/qinghua/">{:L('_L_ZH')}</a></div>
+            </ul>
+        </div>
+    </div>
+</nav>

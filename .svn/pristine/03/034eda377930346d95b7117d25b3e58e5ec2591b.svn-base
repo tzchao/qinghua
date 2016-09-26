@@ -1,0 +1,12 @@
+<!-- 内页banner -->
+<div class="ny-banner">
+	<img src="__PUBLIC__/qh_images/ny-banner1.jpg" class="img-responsive" alt="">
+</div>
+
+<!-- 内页主内容 -->
+<div class="ny-main container">
+	<!--左侧栏-->
+	<include file="Menu:left" />
+	<!-- 主体内容右侧 -->
+	<include file="Menu:right" />
+</div>

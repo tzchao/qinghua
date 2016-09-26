@@ -1,0 +1,21 @@
+<!-- 内页banner -->
+<div class="ny-banner">
+	<qiqi:type typeid="$pid">
+		<img src="{$type.catpic}" class="img-responsive" alt="{$type.name}">
+	</qiqi:type>
+</div>
+<!-- 内页主内容 -->
+<div class="ny-main container">
+	<!--左侧栏-->
+	<include file="Menu:left" />
+	<div class="cont-right">
+		<!--发展历程-->
+		<div class="column-tit">
+			<i></i>{$cate.name}
+		</div>
+		<div class="content">
+			<div class="indent-2"><if condition="empty($cate['content'])">{:L('_L_NOCONTENT')}</if>{$cate.content}</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>

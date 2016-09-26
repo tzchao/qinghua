@@ -1,0 +1,33 @@
+<?php
+namespace Common\LibTag;
+use Think\Template\TagLib;
+
+//自定义标签库
+class Other extends TagLib {
+	
+	protected $tags = array(
+		//自定义标签
+		'devel'	=> array(
+				'attr'	=>	'cid',
+				'close' => 1,// close 是否闭合（0 或者1 默认为1，表示闭合）	
+		),
+	);
+	
+	/*获取发展历程里的东西*/
+	public function _devel($attr,$content){
+		$cid = empty($attr['cid'])? 0 : trim($attr['cid']);
+		$str = <<<str
+<?php
+		\$_cid = intval($cid);
+		\$devel = getDevelList(\$_cid);
+?>		
+str;
+		$str .= $content;
+		return $str;
+	}
+	
+
+}
+
+
+?>

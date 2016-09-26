@@ -1,0 +1,25 @@
+<div class="menu-left">
+	<qiqi:type typeid="$pid">
+		<div class="column-tit">{$type.name}</div>
+	</qiqi:type>
+		<div class="box">
+			<qiqi:catlist typeid='$pid' flag='1'>
+				<if condition="count($catlist['child']) EQ 0">
+					<div class="menu-li menu-erji">
+						<span <if condition="$catlist['id'] eq $cid">class="cur"</if>><i></i><a href="{$catlist.url}">{$catlist.name}</a></span>
+					</div>
+				<else />
+					<div class="menu-li">
+						<qiqi:type typeid="$cid">
+					        <span class="<eq name="type['pid']" value="$catlist['id']">cur</eq>"><i></i><a href="javascript:;">{$catlist.name}</a></span>
+					        <ul style="display:<eq name="type['pid']" value="$catlist['id']">block</eq>">
+					        	<volist name='catlist["child"]' id='v'>
+					          		<li class="<eq name="v['id']" value="$cid">curr</eq>"><a href="{$v|get_url}">{$v.name}</a></li>
+					          	</volist>
+					        </ul>
+					    </qiqi:type>
+				    </div>
+				</if>
+			</qiqi:catlist>
+		</div>
+	</div>

@@ -1,0 +1,15 @@
+<!--技术支持：奇奇科技  www.qiqikeji.com --><!DOCTYPE html><html lang="zh-CN">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title><if condition="$title eq <qiqi:sitename />">{$title}<else />{$title}-<qiqi:sitename /></if></title>
+<meta name="keywords" content="<if condition="empty($keywords)"><qiqi:sitekeywords /><else />{$keywords}</if>">
+<meta name="description" content="<if condition="empty($description)"><qiqi:sitedescription /><else />{$keywords}</if>">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="author" content="luffy! a web enthusiast" />
+<link rel="shortcut icon" href="favicon.ico">
+<link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+<link href="__PUBLIC__/css/common.css" rel="stylesheet">
+<link href="__PUBLIC__/css/style.css" rel="stylesheet">
+
+</head>
+<body>

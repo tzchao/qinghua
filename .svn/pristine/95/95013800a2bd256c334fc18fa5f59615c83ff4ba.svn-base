@@ -1,0 +1,476 @@
+<?php if (!defined('THINK_PATH')) exit();?><link href="/qinghua/Public/Home/qinghua/css/stylesv.css" rel="stylesheet"><!--时间轴-->
+<link href="/qinghua/Public/Home/qinghua/css/jquery.mCustomScrollbar.css" rel="stylesheet"><!--自定义滚动条-->
+<!--技术支持：奇奇科技  www.qiqikeji.com --><!DOCTYPE html><html lang="zh-CN">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title><?php if($title == 清化大学工业工程系): echo ($title); else: echo ($title); ?>-清化大学工业工程系<?php endif; ?></title>
+<meta name="keywords" content="<?php if(empty($keywords)): ?>清化大学工业工程系<?php else: echo ($keywords); endif; ?>">
+<meta name="description" content="<?php if(empty($description)): ?>清化大学工业工程系<?php else: echo ($keywords); endif; ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="author" content="luffy! a web enthusiast" />
+<link rel="shortcut icon" href="favicon.ico">
+<link href="/qinghua/Public/Home/qinghua/css/bootstrap.min.css" rel="stylesheet">
+<link href="/qinghua/Public/Home/qinghua/css/common.css" rel="stylesheet">
+<link href="/qinghua/Public/Home/qinghua/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header id="header" class="header">
+    <div class="container">
+        <h1 class="logo-head"><a href="http://www.web.com/qinghua"><img src="/qinghua/uploads/img1/20160614/575fc8707188b.png" alt="清化大学工业工程系" title="清化大学工业工程系" /></a></h1>
+        <div class="headerR">
+            <div class="headerR-top">
+                <a href="#" class="headerRimg headerRa4">&nbsp;</a>
+                <a href="#" class="headerRimg headerRa3">&nbsp;<img src="/qinghua/Public/Home/qinghua/qh_images/erweima.jpg"></a>
+                <div class="headerbtn visible-xs-block">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+                <div class="headerRcon">
+                    <a href="#" class="headerRa1">登录内网</a>
+                    <a href="#" class="headerRa2">招聘信息</a>
+                    <a href="#" class="headerRa2">系友风采</a>
+                </div>
+            </div>
+            <div class="headerR-search">
+                <input type="text"/><button onclick="window.location='search.html'"></button>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- 网站主题 -->
+<section>
+	<!-- 导航开始 -->
+	<!-- 导航 -->
+<nav class="navbar">
+    <div class="container navbarbor">
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav">
+                <li class="erji-li">
+                  <a href="http://www.web.com/qinghua" <?php if(empty($cid)): ?>class="on"<?php endif; ?>><?php echo L('_L_WEBNAME');?></a>
+                </li>
+                <?php $pid = getTopCatid($cid); ?>
+                <?php
+ $_typeid = intval(0); $_type = "son"; $_temp = explode(',', "10"); $_temp[0] = $_temp[0] > 0? $_temp[0] : 10; if (isset($_temp[1]) && intval($_temp[1]) > 0) { $_limit[0] = $_temp[0]; $_limit[1] = intval($_temp[1]); }else { $_limit[0] = 0; $_limit[1] = $_temp[0]; } if($_typeid == -1) $_typeid = I('cid', 0, 'intval'); $__catlist = get_category(1); if (0) { $__catlist = Common\Lib\Category::getLevelOfModelId($__catlist, 0); } if (1 == 0) { $__catlist = Common\Lib\Category::clearPageAndLink($__catlist); } if($_typeid == 0 || $_type == 'top') { $_catlist = Common\Lib\Category::toLayer($__catlist); }else { if ($_type == 'self') { $_typeinfo = Common\Lib\Category::getSelf($__catlist, $_typeid ); $_catlist = Common\Lib\Category::toLayer($__catlist, 'child', $_typeinfo['pid']); }else { $_catlist = Common\Lib\Category::toLayer($__catlist, 'child', $_typeid); } } foreach($_catlist as $autoindex => $catlist): if($autoindex < $_limit[0]) continue; if($autoindex >= ($_limit[1]+$_limit[0])) break; $catlist['url'] = get_url($catlist); if(count($catlist['child'][0]['child']) == 0): ?><li class="erji-li">
+	                		<a href="<?php echo ($catlist["url"]); ?>" <?php if($pid == $catlist['id']): ?>class="on"<?php endif; ?>><?php echo ($catlist["name"]); ?></a>
+	                			<?php if(count($catlist['child']) > 0): ?><div class="erji-box">
+			                			<div class=""></div>
+			                     		<div class="menu-sec">
+				                			<?php if(is_array($catlist["child"])): $i = 0; $__LIST__ = $catlist["child"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><a href="<?php echo (get_url($v)); ?>"><?php echo ($v["name"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+			                			</div>
+											<?php if(is_array($catlist["child"])): $k = 0; $__LIST__ = $catlist["child"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($k % 2 );++$k;?><div class="erjiDesc" style="display: <?php if(($k) == "1"): ?>block<?php else: ?>none<?php endif; ?>">
+													<div class="desc">
+														<p class="indent-2"><?php if(empty($v['description'])): echo L('_L_CATNODES'); else: echo ($v["description"]); endif; ?></p>
+													</div>
+													<div class="pic">
+														<img src="<?php if(empty($v['catpic'])): ?>/qinghua/Public/Home/qinghua/qh_images/nopic_len.png<?php else: echo ($v["catpic"]); endif; ?>" class="img-responsive" alt="">
+													</div>
+												</div><?php endforeach; endif; else: echo "" ;endif; ?>
+
+									</div><?php endif; ?>
+	                	</li>
+	                <?php else: ?>
+	                	<li class="erji-li sanji-li">
+		                    <a href="<?php echo ($catlist["url"]); ?>" <?php if($pid == $catlist['id']): ?>class="on"<?php endif; ?>><?php echo ($catlist["name"]); ?></a>
+		                    <div class="erji-box">
+		                    	<?php if(is_array($catlist["child"])): $i = 0; $__LIST__ = $catlist["child"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><dl>
+			                        <dt><a href="<?php echo (get_url($v)); ?>"><?php echo ($v["name"]); ?></a></dt>
+			                        	<?php if(is_array($v["child"])): $i = 0; $__LIST__ = $v["child"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i;?><dd><a href="<?php echo (get_url($v2)); ?>"><?php echo ($v2["name"]); ?></a></dd><?php endforeach; endif; else: echo "" ;endif; ?>
+			                      </dl><?php endforeach; endif; else: echo "" ;endif; ?>
+		                    </div>
+		                </li><?php endif; endforeach;?>
+                <div class="pull-right menua hidden-xs"><a href="#" class="eng">EN</a><a href="#"><?php echo L('_L_ZH');?></a></div>
+            </ul>
+        </div>
+    </div>
+</nav>
+	<!-- 内页banner -->
+	<div class="ny-banner">
+		<img src="/qinghua/Public/Home/qinghua/qh_images/ny-banner1.jpg" class="img-responsive" alt="">
+	</div>
+	<!-- 内容主体 -->
+	<div class="ny-main container">
+		<!--左侧栏-->
+		<div class="menu-left">
+	<?php
+ $type = Common\Lib\Category::getSelf(get_category(0), $pid); $type['url'] = get_url($type); ?><div class="column-tit"><?php echo ($type["name"]); ?></div>
+		<div class="box">
+			<?php
+ $_typeid = intval($pid); $_type = "son"; $_temp = explode(',', "10"); $_temp[0] = $_temp[0] > 0? $_temp[0] : 10; if (isset($_temp[1]) && intval($_temp[1]) > 0) { $_limit[0] = $_temp[0]; $_limit[1] = intval($_temp[1]); }else { $_limit[0] = 0; $_limit[1] = $_temp[0]; } if($_typeid == -1) $_typeid = I('cid', 0, 'intval'); $__catlist = get_category(1); if (0) { $__catlist = Common\Lib\Category::getLevelOfModelId($__catlist, 0); } if (1 == 0) { $__catlist = Common\Lib\Category::clearPageAndLink($__catlist); } if($_typeid == 0 || $_type == 'top') { $_catlist = Common\Lib\Category::toLayer($__catlist); }else { if ($_type == 'self') { $_typeinfo = Common\Lib\Category::getSelf($__catlist, $_typeid ); $_catlist = Common\Lib\Category::toLayer($__catlist, 'child', $_typeinfo['pid']); }else { $_catlist = Common\Lib\Category::toLayer($__catlist, 'child', $_typeid); } } foreach($_catlist as $autoindex => $catlist): if($autoindex < $_limit[0]) continue; if($autoindex >= ($_limit[1]+$_limit[0])) break; $catlist['url'] = get_url($catlist); if(count($catlist['child']) == 0): ?><div class="menu-li menu-erji">
+						<span <?php if($catlist['id'] == $cid): ?>class="cur"<?php endif; ?>><i></i><a href="<?php echo ($catlist["url"]); ?>"><?php echo ($catlist["name"]); ?></a></span>
+					</div>
+				<?php else: ?>
+					<div class="menu-li">
+						<?php
+ $type = Common\Lib\Category::getSelf(get_category(0), $cid); $type['url'] = get_url($type); ?><span class="<?php if(($type['pid']) == $catlist['id']): ?>cur<?php endif; ?>"><i></i><a href="javascript:;"><?php echo ($catlist["name"]); ?></a></span>
+					        <ul style="display:<?php if(($type['pid']) == $catlist['id']): ?>block<?php endif; ?>">
+					        	<?php if(is_array($catlist["child"])): $i = 0; $__LIST__ = $catlist["child"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li class="<?php if(($v['id']) == $cid): ?>curr<?php endif; ?>"><a href="<?php echo (get_url($v)); ?>"><?php echo ($v["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+					        </ul>
+				    </div><?php endif; endforeach;?>
+		</div>
+	</div>
+		<!-- 主体内容右侧 -->
+		<?php
+ $devel = getDevelList(5); ?>		<?php print_r($devel);die; ?>
+<div class="cont-right">
+    <!--发展历程-->
+    <div class="column-tit"><i></i>发展历程</div>
+    <div class="content">
+      <h3 style="color: #46228e; font-size: 18px; line-height: 32px">重大事件</h3>
+      <p>页面要求具有国际一流院系网站的特质，具有现代网站的大气、清新、及对年轻学子富有吸引力的风格，排版合理易用性强，符合清华大学主流色调。可参考国内外著名高校及院系的网站。页面要求具有国际一流院系网站的特质，具有现代网站的大气、清新、及对年轻学子富有吸引力的风格。页面要求具有国际一流院系网站的特质。</p>
+    </div>
+    <div id="container" class="content clearfix">
+      <div id="timeline">
+        <div class="shijian">
+          <b class="fg t"></b>
+          <b class="fg b"></b>
+          <ul id="dates">
+            <li><a href="#2015" >2015</a></li>
+            <li><a href="#2014">2014</a></li>
+            <li><a  class="selected" href="#2013">2013</a></li>
+            <li><a href="#2012">2012</a></li>
+            <li><a href="#2011">2011</a></li>
+            <li><a href="#2010">2010</a></li>
+            <li><a href="#2009">2009</a></li>
+            <li><a href="#2008">2008</a></li>
+            <li><a href="#2007">2007</a></li>
+            <li><a href="#2006">2006</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <ul id="issues">
+            <li id="2015">
+              <p><span>2015.01</span>            谢旻教授受聘为清华大学工业工程系兼职教授。  </p>
+              <p><span>2015.03.28</span>       清华IE系友供应链与物流协会成立大会暨首次协会活动召开。 </p>
+              <p><span>2015.04</span>          清华大学建校104周年校庆期间我系举行系友系列活动 。 </p>
+              <p><span>2015.05.28</span>       清华大学由我系承办的2015“一带一路”人才战略论坛召开 。 </p>
+              <p><span>2015.05.28</span>     中航工业集团副总经理张新国受聘我系兼职教授  。</p>
+              <p><span>2015.06.06</span>      我系举办2015年本科生年会“IE汇”。  </p>
+              <p><span>2015.06.27</span>       挂靠在我系的清华大学统计学研究中心成立  。</p>
+              <p><span>2015.06.30</span>       我系举办“清华大学供应链与物流教育创新论坛暨创业项目发布会”。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.09.08</span>       挂靠我系的清华大学质量与可靠性研究院铁路安全与质量研究中心成立 。 </p>
+              <p><span>2015.10.12</span>       芬兰阿尔托大学校长Tuula Teeri教授访问我系 。 </p>
+              <p><span>2015.11</span>            我系教师王凯波当选美国INFORMS学会QSR分会主席  。</p>
+              <p><span>2015.11.18</span>       我系举办大一新生与教师自由交流会  。</p>
+              <p><span>2015.11.21-22</span>  我系承办2015全国工业工程博士生学术会议暨清华大学第430期博士生论坛 。 </p>
+              <p><span>2015.12.04</span>       工业工程系举办“互联网+下的创业创新峰会暨创业项目发布会”</p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.23</span>        清华大学工业工程系与俄罗斯圣彼得堡彼得大帝理工大学举行科研合作见面会 。</p>
+            </li><li id="2014" class="">
+              <p><span>2015.01</span>            谢旻教授受聘为清华大学工业工程系兼职教授。  </p>
+              <p><span>2015.03.28</span>       清华IE系友供应链与物流协会成立大会暨首次协会活动召开。 </p>
+              <p><span>2015.04</span>          清华大学建校104周年校庆期间我系举行系友系列活动 。 </p>
+              <p><span>2015.05.28</span>       清华大学由我系承办的2015“一带一路”人才战略论坛召开 。 </p>
+              <p><span>2015.05.28</span>     中航工业集团副总经理张新国受聘我系兼职教授  。</p>
+              <p><span>2015.06.06</span>      我系举办2015年本科生年会“IE汇”。  </p>
+              <p><span>2015.06.27</span>       挂靠在我系的清华大学统计学研究中心成立  。</p>
+              <p><span>2015.06.30</span>       我系举办“清华大学供应链与物流教育创新论坛暨创业项目发布会”。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.09.08</span>       挂靠我系的清华大学质量与可靠性研究院铁路安全与质量研究中心成立 。 </p>
+              <p><span>2015.10.12</span>       芬兰阿尔托大学校长Tuula Teeri教授访问我系 。 </p>
+              <p><span>2015.11</span>            我系教师王凯波当选美国INFORMS学会QSR分会主席  。</p>
+              <p><span>2015.11.18</span>       我系举办大一新生与教师自由交流会  。</p>
+              <p><span>2015.11.21-22</span>  我系承办2015全国工业工程博士生学术会议暨清华大学第430期博士生论坛 。 </p>
+              <p><span>2015.12.04</span>       工业工程系举办“互联网+下的创业创新峰会暨创业项目发布会”</p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.23</span>        清华大学工业工程系与俄罗斯圣彼得堡彼得大帝理工大学举行科研合作见面会 。</p>
+            </li><li id="2013" class="selected">
+              <p><span>2015.01</span>            谢旻教授受聘为清华大学工业工程系兼职教授。  </p>
+              <p><span>2015.03.28</span>       清华IE系友供应链与物流协会成立大会暨首次协会活动召开。 </p>
+              <p><span>2015.04</span>          清华大学建校104周年校庆期间我系举行系友系列活动 。 </p>
+              <p><span>2015.05.28</span>       清华大学由我系承办的2015“一带一路”人才战略论坛召开 。 </p>
+              <p><span>2015.05.28</span>     中航工业集团副总经理张新国受聘我系兼职教授  。</p>
+              <p><span>2015.06.06</span>      我系举办2015年本科生年会“IE汇”。  </p>
+              <p><span>2015.06.27</span>       挂靠在我系的清华大学统计学研究中心成立  。</p>
+              <p><span>2015.06.30</span>       我系举办“清华大学供应链与物流教育创新论坛暨创业项目发布会”。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.09.08</span>       挂靠我系的清华大学质量与可靠性研究院铁路安全与质量研究中心成立 。 </p>
+              <p><span>2015.10.12</span>       芬兰阿尔托大学校长Tuula Teeri教授访问我系 。 </p>
+              <p><span>2015.11</span>            我系教师王凯波当选美国INFORMS学会QSR分会主席  。</p>
+              <p><span>2015.11.18</span>       我系举办大一新生与教师自由交流会  。</p>
+              <p><span>2015.11.21-22</span>  我系承办2015全国工业工程博士生学术会议暨清华大学第430期博士生论坛 。 </p>
+              <p><span>2015.12.04</span>       工业工程系举办“互联网+下的创业创新峰会暨创业项目发布会”</p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.23</span>        清华大学工业工程系与俄罗斯圣彼得堡彼得大帝理工大学举行科研合作见面会 。</p>
+            </li><li id="2012" class="">
+              <p><span>2015.01</span>            谢旻教授受聘为清华大学工业工程系兼职教授。  </p>
+              <p><span>2015.03.28</span>       清华IE系友供应链与物流协会成立大会暨首次协会活动召开。 </p>
+              <p><span>2015.04</span>          清华大学建校104周年校庆期间我系举行系友系列活动 。 </p>
+              <p><span>2015.05.28</span>       清华大学由我系承办的2015“一带一路”人才战略论坛召开 。 </p>
+              <p><span>2015.05.28</span>     中航工业集团副总经理张新国受聘我系兼职教授  。</p>
+              <p><span>2015.06.06</span>      我系举办2015年本科生年会“IE汇”。  </p>
+              <p><span>2015.06.27</span>       挂靠在我系的清华大学统计学研究中心成立  。</p>
+              <p><span>2015.06.30</span>       我系举办“清华大学供应链与物流教育创新论坛暨创业项目发布会”。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.09.08</span>       挂靠我系的清华大学质量与可靠性研究院铁路安全与质量研究中心成立 。 </p>
+              <p><span>2015.10.12</span>       芬兰阿尔托大学校长Tuula Teeri教授访问我系 。 </p>
+              <p><span>2015.11</span>            我系教师王凯波当选美国INFORMS学会QSR分会主席  。</p>
+              <p><span>2015.11.18</span>       我系举办大一新生与教师自由交流会  。</p>
+              <p><span>2015.11.21-22</span>  我系承办2015全国工业工程博士生学术会议暨清华大学第430期博士生论坛 。 </p>
+              <p><span>2015.12.04</span>       工业工程系举办“互联网+下的创业创新峰会暨创业项目发布会”</p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.23</span>        清华大学工业工程系与俄罗斯圣彼得堡彼得大帝理工大学举行科研合作见面会 。</p>
+            </li><li id="2011" class="">
+              <p><span>2015.01</span>            谢旻教授受聘为清华大学工业工程系兼职教授。  </p>
+              <p><span>2015.03.28</span>       清华IE系友供应链与物流协会成立大会暨首次协会活动召开。 </p>
+              <p><span>2015.04</span>          清华大学建校104周年校庆期间我系举行系友系列活动 。 </p>
+              <p><span>2015.05.28</span>       清华大学由我系承办的2015“一带一路”人才战略论坛召开 。 </p>
+              <p><span>2015.05.28</span>     中航工业集团副总经理张新国受聘我系兼职教授  。</p>
+              <p><span>2015.06.06</span>      我系举办2015年本科生年会“IE汇”。  </p>
+              <p><span>2015.06.27</span>       挂靠在我系的清华大学统计学研究中心成立  。</p>
+              <p><span>2015.06.30</span>       我系举办“清华大学供应链与物流教育创新论坛暨创业项目发布会”。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.09.08</span>       挂靠我系的清华大学质量与可靠性研究院铁路安全与质量研究中心成立 。 </p>
+              <p><span>2015.10.12</span>       芬兰阿尔托大学校长Tuula Teeri教授访问我系 。 </p>
+              <p><span>2015.11</span>            我系教师王凯波当选美国INFORMS学会QSR分会主席  。</p>
+              <p><span>2015.11.18</span>       我系举办大一新生与教师自由交流会  。</p>
+              <p><span>2015.11.21-22</span>  我系承办2015全国工业工程博士生学术会议暨清华大学第430期博士生论坛 。 </p>
+              <p><span>2015.12.04</span>       工业工程系举办“互联网+下的创业创新峰会暨创业项目发布会”</p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.23</span>        清华大学工业工程系与俄罗斯圣彼得堡彼得大帝理工大学举行科研合作见面会 。</p>
+            </li><li id="2010" class="">
+              <p><span>2015.01</span>            谢旻教授受聘为清华大学工业工程系兼职教授。  </p>
+              <p><span>2015.03.28</span>       清华IE系友供应链与物流协会成立大会暨首次协会活动召开。 </p>
+              <p><span>2015.04</span>          清华大学建校104周年校庆期间我系举行系友系列活动 。 </p>
+              <p><span>2015.05.28</span>       清华大学由我系承办的2015“一带一路”人才战略论坛召开 。 </p>
+              <p><span>2015.05.28</span>     中航工业集团副总经理张新国受聘我系兼职教授  。</p>
+              <p><span>2015.06.06</span>      我系举办2015年本科生年会“IE汇”。  </p>
+              <p><span>2015.06.27</span>       挂靠在我系的清华大学统计学研究中心成立  。</p>
+              <p><span>2015.06.30</span>       我系举办“清华大学供应链与物流教育创新论坛暨创业项目发布会”。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.09.08</span>       挂靠我系的清华大学质量与可靠性研究院铁路安全与质量研究中心成立 。 </p>
+              <p><span>2015.10.12</span>       芬兰阿尔托大学校长Tuula Teeri教授访问我系 。 </p>
+              <p><span>2015.11</span>            我系教师王凯波当选美国INFORMS学会QSR分会主席  。</p>
+              <p><span>2015.11.18</span>       我系举办大一新生与教师自由交流会  。</p>
+              <p><span>2015.11.21-22</span>  我系承办2015全国工业工程博士生学术会议暨清华大学第430期博士生论坛 。 </p>
+              <p><span>2015.12.04</span>       工业工程系举办“互联网+下的创业创新峰会暨创业项目发布会”</p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.23</span>        清华大学工业工程系与俄罗斯圣彼得堡彼得大帝理工大学举行科研合作见面会 。</p>
+            </li><li id="2009" class="">
+              <p><span>2015.01</span>            谢旻教授受聘为清华大学工业工程系兼职教授。  </p>
+              <p><span>2015.03.28</span>       清华IE系友供应链与物流协会成立大会暨首次协会活动召开。 </p>
+              <p><span>2015.04</span>          清华大学建校104周年校庆期间我系举行系友系列活动 。 </p>
+              <p><span>2015.05.28</span>       清华大学由我系承办的2015“一带一路”人才战略论坛召开 。 </p>
+              <p><span>2015.05.28</span>     中航工业集团副总经理张新国受聘我系兼职教授  。</p>
+              <p><span>2015.06.06</span>      我系举办2015年本科生年会“IE汇”。  </p>
+              <p><span>2015.06.27</span>       挂靠在我系的清华大学统计学研究中心成立  。</p>
+              <p><span>2015.06.30</span>       我系举办“清华大学供应链与物流教育创新论坛暨创业项目发布会”。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.09.08</span>       挂靠我系的清华大学质量与可靠性研究院铁路安全与质量研究中心成立 。 </p>
+              <p><span>2015.10.12</span>       芬兰阿尔托大学校长Tuula Teeri教授访问我系 。 </p>
+              <p><span>2015.11</span>            我系教师王凯波当选美国INFORMS学会QSR分会主席  。</p>
+              <p><span>2015.11.18</span>       我系举办大一新生与教师自由交流会  。</p>
+              <p><span>2015.11.21-22</span>  我系承办2015全国工业工程博士生学术会议暨清华大学第430期博士生论坛 。 </p>
+              <p><span>2015.12.04</span>       工业工程系举办“互联网+下的创业创新峰会暨创业项目发布会”</p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.23</span>        清华大学工业工程系与俄罗斯圣彼得堡彼得大帝理工大学举行科研合作见面会 。</p>
+            </li><li id="2008" class="">
+              <p><span>2015.01</span>            谢旻教授受聘为清华大学工业工程系兼职教授。  </p>
+              <p><span>2015.03.28</span>       清华IE系友供应链与物流协会成立大会暨首次协会活动召开。 </p>
+              <p><span>2015.04</span>          清华大学建校104周年校庆期间我系举行系友系列活动 。 </p>
+              <p><span>2015.05.28</span>       清华大学由我系承办的2015“一带一路”人才战略论坛召开 。 </p>
+              <p><span>2015.05.28</span>     中航工业集团副总经理张新国受聘我系兼职教授  。</p>
+              <p><span>2015.06.06</span>      我系举办2015年本科生年会“IE汇”。  </p>
+              <p><span>2015.06.27</span>       挂靠在我系的清华大学统计学研究中心成立  。</p>
+              <p><span>2015.06.30</span>       我系举办“清华大学供应链与物流教育创新论坛暨创业项目发布会”。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.09.08</span>       挂靠我系的清华大学质量与可靠性研究院铁路安全与质量研究中心成立 。 </p>
+              <p><span>2015.10.12</span>       芬兰阿尔托大学校长Tuula Teeri教授访问我系 。 </p>
+              <p><span>2015.11</span>            我系教师王凯波当选美国INFORMS学会QSR分会主席  。</p>
+              <p><span>2015.11.18</span>       我系举办大一新生与教师自由交流会  。</p>
+              <p><span>2015.11.21-22</span>  我系承办2015全国工业工程博士生学术会议暨清华大学第430期博士生论坛 。 </p>
+              <p><span>2015.12.04</span>       工业工程系举办“互联网+下的创业创新峰会暨创业项目发布会”</p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.23</span>        清华大学工业工程系与俄罗斯圣彼得堡彼得大帝理工大学举行科研合作见面会 。</p>
+            </li><li id="2007" class="">
+              <p><span>2015.01</span>            谢旻教授受聘为清华大学工业工程系兼职教授。  </p>
+              <p><span>2015.03.28</span>       清华IE系友供应链与物流协会成立大会暨首次协会活动召开。 </p>
+              <p><span>2015.04</span>          清华大学建校104周年校庆期间我系举行系友系列活动 。 </p>
+              <p><span>2015.05.28</span>       清华大学由我系承办的2015“一带一路”人才战略论坛召开 。 </p>
+              <p><span>2015.05.28</span>     中航工业集团副总经理张新国受聘我系兼职教授  。</p>
+              <p><span>2015.06.06</span>      我系举办2015年本科生年会“IE汇”。  </p>
+              <p><span>2015.06.27</span>       挂靠在我系的清华大学统计学研究中心成立  。</p>
+              <p><span>2015.06.30</span>       我系举办“清华大学供应链与物流教育创新论坛暨创业项目发布会”。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.09.08</span>       挂靠我系的清华大学质量与可靠性研究院铁路安全与质量研究中心成立 。 </p>
+              <p><span>2015.10.12</span>       芬兰阿尔托大学校长Tuula Teeri教授访问我系 。 </p>
+              <p><span>2015.11</span>            我系教师王凯波当选美国INFORMS学会QSR分会主席  。</p>
+              <p><span>2015.11.18</span>       我系举办大一新生与教师自由交流会  。</p>
+              <p><span>2015.11.21-22</span>  我系承办2015全国工业工程博士生学术会议暨清华大学第430期博士生论坛 。 </p>
+              <p><span>2015.12.04</span>       工业工程系举办“互联网+下的创业创新峰会暨创业项目发布会”</p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.23</span>        清华大学工业工程系与俄罗斯圣彼得堡彼得大帝理工大学举行科研合作见面会 。</p>
+            </li><li id="2006" class="">
+              <p><span>2015.01</span>            谢旻教授受聘为清华大学工业工程系兼职教授。  </p>
+              <p><span>2015.03.28</span>       清华IE系友供应链与物流协会成立大会暨首次协会活动召开。 </p>
+              <p><span>2015.04</span>          清华大学建校104周年校庆期间我系举行系友系列活动 。 </p>
+              <p><span>2015.05.28</span>       清华大学由我系承办的2015“一带一路”人才战略论坛召开 。 </p>
+              <p><span>2015.05.28</span>     中航工业集团副总经理张新国受聘我系兼职教授  。</p>
+              <p><span>2015.06.06</span>      我系举办2015年本科生年会“IE汇”。  </p>
+              <p><span>2015.06.27</span>       挂靠在我系的清华大学统计学研究中心成立  。</p>
+              <p><span>2015.06.30</span>       我系举办“清华大学供应链与物流教育创新论坛暨创业项目发布会”。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.08.26</span>       由我系负责的清华大学工程管理硕士（MEM）2015级举行开学典礼及入学教育  。</p>
+              <p><span>2015.09.08</span>       挂靠我系的清华大学质量与可靠性研究院铁路安全与质量研究中心成立 。 </p>
+              <p><span>2015.10.12</span>       芬兰阿尔托大学校长Tuula Teeri教授访问我系 。 </p>
+              <p><span>2015.11</span>            我系教师王凯波当选美国INFORMS学会QSR分会主席  。</p>
+              <p><span>2015.11.18</span>       我系举办大一新生与教师自由交流会  。</p>
+              <p><span>2015.11.21-22</span>  我系承办2015全国工业工程博士生学术会议暨清华大学第430期博士生论坛 。 </p>
+              <p><span>2015.12.04</span>       工业工程系举办“互联网+下的创业创新峰会暨创业项目发布会”</p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.18</span>       由我系主办的2015清华大学中国制造业、物流业高峰论坛暨第十届“东风日产杯”清华IE亮剑全国工业工程应用案例大赛圆满举行 。 </p>
+              <p><span>2015.12.23</span>        清华大学工业工程系与俄罗斯圣彼得堡彼得大帝理工大学举行科研合作见面会 。</p>
+            </li>
+          </ul>
+        </div>
+        <a href="#" id="next"></a>
+        <a href="#" id="prev"></a>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+	</div>
+</section>
+<!-- 底部信息 -->
+<div class="width marginTop50">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 footerLeft">
+                <ul>
+                    <li><a href="#"><img src="/qinghua/Public/Home/qinghua/qh_images/footerimg1.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="/qinghua/Public/Home/qinghua/qh_images/footerimg2.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="/qinghua/Public/Home/qinghua/qh_images/footerimg3.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="/qinghua/Public/Home/qinghua/qh_images/footerimg4.jpg" alt=""/></a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 footerRight">
+                <div class="footerRightcon">
+                    <div class="footerRight1">
+                        清化大学工业工程系<br/>联系电话： 400-880-7651<br/>传真：010-62794399<br/>E-mail：zhcl@tsinghua.edu.cn<br/>地址：北京市海淀区上地十街辉煌国际大厦1号楼608室。
+                    </div>
+                    <div class="footerRight2"><img src="/qinghua/Public/Home/qinghua/qh_images/erweima.jpg" alt=""/></div>
+                    <div class="footerRight3">
+                        <a href="" class="footerRight3icon1"></a>
+                        <a href="" class="footerRight3icon2"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="width footercon">
+    <div class="container">
+        Copyright © 2014-2016 QIQICMS. 奇奇科技 版权所有
+    </div>
+</div>
+<!-- 统计代码 -->
+
+<script type="text/javascript" src="/qinghua/Public/Home/qinghua/qh_js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/qinghua/Public/Home/qinghua/qh_js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="/qinghua/Public/Home/qinghua/qh_js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="/qinghua/Public/Home/qinghua/qh_js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/qinghua/Public/Home/qinghua/qh_js/publicJS.js"></script>
+</body></html>
+
+<script type="text/javascript" src="qh_js/jquery.mCustomScrollbar.concat.min.js"></script><!--自定义滚动条-->
+<script>
+    (function($){
+        $(window).load(function(){
+            $("#issues li").mCustomScrollbar();
+        });
+    })(jQuery);
+</script>
+<!--时间轴-->
+<script type="text/javascript" src="/qinghua/Public/Home/qinghua/qh_js/jquery.mCustomScrollbar.concat.min.js"></script><!--自定义滚动条-->
+<script>
+    (function($){
+        $(window).load(function(){
+            $("#issues li").mCustomScrollbar();
+        });
+    })(jQuery);
+</script>
+<!--时间轴-->
+<script type="text/javascript" src="/qinghua/Public/Home/qinghua/qh_js/jquery.timelinr-0.9.4.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $().timelinr({
+      orientation: 'vertical',
+      issuesSpeed: 300,
+      datesSpeed: 100,
+      issuesSpeed: 650,
+      arrowKeys: 'true',
+      startAt: 3
+    })
+  });
+</script>

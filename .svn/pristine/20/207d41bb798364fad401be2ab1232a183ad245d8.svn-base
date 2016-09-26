@@ -1,0 +1,29 @@
+<header id="header" class="header">
+    <div class="container">
+        <h1 class="logo-head"><a href="<qiqi:siteurl />"><img src="<qiqi:logo/>" alt="<qiqi:sitetitle/>" title="<qiqi:sitetitle/>" /></a></h1>
+        <div class="headerR">
+            <div class="headerR-top">
+            	<qiqi:abc id='7' limit='1'>
+                	<a href="{$abc.url}" target='__blank' title="{$abc.content}" class="headerRimg headerRa4">&nbsp;</a>
+                </qiqi:abc>
+                <a href="#" class="headerRimg headerRa3" title="{:L('_L_I_WX')}">&nbsp;<qiqi:abc id='6' limit='1'><img src="{$abc.content}" alt="<qiqi:sitetitle/>"></qiqi:abc></a>
+                <div class="headerbtn visible-xs-block">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+                <div class="headerRcon">
+                <qiqi:ad id='4' />
+                    
+                </div>
+            </div>
+            <div class="headerR-search">
+            	<form id="SearchForm" name="SearchForm" method="post" action="<qiqi:searchurl />">
+            		<input name="type" type="hidden" value="all" />
+                	<input name="keyword" type="text" id="keyword"  value="<if condition="empty($keyword)">{:L('_L_PLEASE_KEY')}<else />{$keyword}</if>" onfocus="if(this.value=='{:L('_L_PLEASE_KEY')}'){this.value='';}" onblur="if(this.value==''){this.value='{:L('_L_PLEASE_KEY')}';}"/>
+                	<button onclick="javascript:document.getElementById('SearchForm').submit();"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>

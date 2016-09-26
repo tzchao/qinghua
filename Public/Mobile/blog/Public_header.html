@@ -1,0 +1,15 @@
+<div id="header">
+  <div class="logo">
+    <h1><a href="<qiqi:siteurl />" title="<qiqi:sitename />" rel="home"><qiqi:sitename /></a></h1>
+    <p><qiqi:sitedescription /></p>
+    </div> 
+  <div class="navBtn">
+  <div class="navArea">
+  <a class="nvali" href="{:U('Index/index')}">网站首页</a>
+  <qiqi:navlist typeid='0'>
+  <if condition='$autoindex eq 3 || $autoindex eq 7'></div><div class="navArea"></if>
+  <a href='{$navlist.url}'>{$navlist.name}</a>
+  </qiqi:navlist>
+  </div>
+  </div>
+</div>

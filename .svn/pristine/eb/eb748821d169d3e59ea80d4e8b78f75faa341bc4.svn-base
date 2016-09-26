@@ -1,0 +1,102 @@
+<!-- 内页banner -->
+<div class="ny-banner">
+	<img src="__PUBLIC__/qh_images/ny-banner1.jpg" class="img-responsive" alt="">
+</div>
+
+<!-- 内页主内容 -->
+<div class="ny-main container">
+	<!--左侧栏-->
+	<include file="Menu:left" />
+	<div class="cont-right">
+		<!--发展历程-->
+		<div class="column-tit">
+			<i></i>全系概况
+		</div>
+		<div class="content">
+			<img src="__PUBLIC__/qh_images/img1.jpg">
+			<p></p>
+			<p>清华大学工业工程学科发展始于20世纪90年代，1993年第一批获准设立工业工程工程硕士专业，1997年起设立本科专业并开始招生，
+				后又获准按"管理科学与工程"一级学科授予工业工程方向工学硕士和博士学位。</p>
+			<p>2001年10月11日，清华大学工业工程系正式成立，特聘美国工程院院士、普渡大学 Salvendy
+				教授出任首届系主任和讲席教授。
+				工业工程系的立系宗旨是：“在教育与研究方面建成世界一流的工业工程系，致力于提高中国和世界的生产力、提高人民的生活质量与生活水平。</p>
+			<p></p>
+		</div>
+		<div class="menu-list">
+			<li>
+				<div class="box">
+					<a class="trans-hover pic" href="xuekejianjie.html"><img
+						src="__PUBLIC__/qh_images/img2.jpg" class="trans" alt=""></a>
+					<h2>
+						<i></i>学科简介
+					</h2>
+					<p>
+						清华大学工业工程学科发展始于20世纪90年代， 1993年第纪90年代，
+						1第一批获准设立工业工程工程硕士专业工程硕士专业，1997年起设立本科专业起设立本科专业并开始招生，后又获准按" 管理科学与 工程
+						"一级学科授予工业工程方向工学硕士和博士学位。<a class="more" href="">[更多]</a>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="box">
+					<a class="trans-hover pic" href="xuekejianjie.html"><img
+						src="__PUBLIC__/qh_images/img3.jpg" class="trans" alt=""></a>
+					<h2>
+						<i></i>毕业走向
+					</h2>
+					<p>
+						清华大学工业工程学科发展始于20世纪90年代， 1993年第纪90年代，
+						1第一批获准设立工业工程工程硕士专业工程硕士专业，1997年起设立本科专业起设立本科专业并开始招生，后又获准按" 管理科学与 工程
+						"一级学科授予工业工程方向工学硕士和博士学位。<a class="more" href="">[更多]</a>
+					</p>
+				</div>
+			</li>
+		</div>
+		<div class="news-project">
+			<div class="tit">
+				<span>项目动态</span>
+			</div>
+			<ul>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕工程硕士研究生论文指导论坛开幕工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+			</ul>
+			<div class="fenye">
+				<a href="">上一页</a> <a class="curr num">1</a> <a class="num" href="">2</a>
+				<a class="num" href="">3</a> <a class="num" href="">4</a> <a
+					class="num" href="">5</a> <a class="num" href="">6</a> <a
+					class="num" href="">7</a> <a class="num" href="">8</a> <a
+					class="num" href="">9</a> <a class="num" href="">10</a> <span
+					class="num">…</span> <a class="num" href="">100</a> <a href="">下一页</a>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>

@@ -1,0 +1,21 @@
+<?php
+	/**
+	 * 根据栏目ID获取顶级栏目ID
+	 */
+	function getTopCatid($catid = 1){
+		$catid = intval($catid);
+		if($catid == 0){
+			return $catid;
+		}
+		$category = M('Category')->where(array('id'=>"$catid"))->field('pid')->find();
+		if($category['pid'] != '0'){
+			$category['pid'] =  getTopCatid($category['pid']);
+		}
+		else{
+			$category['pid'] = $catid;
+		}
+		return $category['pid'];
+	}
+
+
+?>

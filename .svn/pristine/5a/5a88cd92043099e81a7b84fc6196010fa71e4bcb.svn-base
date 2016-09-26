@@ -1,0 +1,31 @@
+<div class="cont-right">
+		<!--发展历程-->
+		<div class="column-tit">
+			<i></i>{$cate.name}
+		</div>
+		<div class="content">
+			<p></p>
+			<p class="indent-2">{$cate.description|nl2br=###}</p>
+			<p></p>
+		</div>
+		<div class="menu-list">
+		
+			<qiqi:catlist typeid="$cid" flag="1">
+				<li>
+					<div class="box">
+						<a class="trans-hover pic" href="{$catlist.url}"><img
+							src="<if condition="empty($catlist['catpic'])">__PUBLIC__/qh_images/nopic_len.png<else />{$catlist.catpic}</if>" class="trans" alt=""></a>
+						<h2>
+							<i></i>{$catlist.name}
+						</h2>
+							<if condition="empty($catlist['description'])"><p onclick="javascript:location.href='{$catlist.url}'">{:L('_L_CATNODES')}</p><else /><p class="clamp row4" title="{$catlist.description}" onclick="javascript:location.href='{$catlist.url}'">{$catlist.description}</p></if>
+					</div>
+				</li>
+			</qiqi:catlist>
+			
+		</div>
+		<div class="news-project">
+			<!-- 项目动态暂时删除 -->
+		</div>
+	</div>
+	<div class="clear"></div>

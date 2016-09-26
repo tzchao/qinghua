@@ -1,0 +1,28 @@
+<header id="header" class="header">
+    <div class="container">
+        <h1 class="logo-head"><a href="<qiqi:siteurl />"><img src="<qiqi:logo/>" alt="<qiqi:sitetitle/>" title="<qiqi:sitetitle/>" /></a></h1>
+        <div class="headerR">
+            <div class="headerR-top">
+                <a href="#" class="headerRimg headerRa4">&nbsp;</a>
+                <a href="#" class="headerRimg headerRa3">&nbsp;<img src="__PUBLIC__/qh_images/erweima.jpg"></a>
+                <div class="headerbtn visible-xs-block">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+                <div class="headerRcon">
+                    <a href="#" class="headerRa1">登录内网</a>
+                    <a href="#" class="headerRa2">招聘信息</a>
+                    <a href="#" class="headerRa2">系友风采</a>
+                </div>
+            </div>
+            <div class="headerR-search">
+            	<form id="SearchForm" name="SearchForm" method="post" action="<qiqi:searchurl />">
+            		<input name="type" type="hidden" value="all" />
+                	<input name="keyword" type="text" id="keyword"  value="<if condition="empty($keyword)">{:L('_L_PLEASE_KEY')}<else />{$keyword}</if>" onfocus="if(this.value=='{:L('_L_PLEASE_KEY')}'){this.value='';}" onblur="if(this.value==''){this.value='{:L('_L_PLEASE_KEY')}';}"/>
+                	<button onclick="javascript:document.getElementById('SearchForm').submit();"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>

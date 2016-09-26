@@ -1,0 +1,734 @@
+[ 2016-06-16T09:03:27+08:00 ] 127.0.0.1 /qinghua/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\999186ab6248e6e1d1252ab2a3cab129.php 第 4 行.
+NOTIC: [8] Undefined variable: cid D:\web\qinghua\App\Runtime\Cache\Home\999186ab6248e6e1d1252ab2a3cab129.php 第 52 行.
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\999186ab6248e6e1d1252ab2a3cab129.php 第 54 行.
+SQL: SHOW COLUMNS FROM `qiqi_abc` [ RunTime:0.0270s ]
+SQL: SELECT * FROM `qiqi_abc` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `qiqi_abc_detail` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `qiqi_abc_detail` WHERE `aid` = 1 AND `status` = 1 AND `starttime` < 1466039007 AND `endtime` > 1466039007 ORDER BY sort LIMIT 3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `qiqi_abc` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `qiqi_abc_detail` WHERE `aid` = 1 AND `status` = 1 AND `starttime` < 1466039007 AND `endtime` > 1466039007 ORDER BY sort LIMIT 3   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.196011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.196011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2016-06-16T09:03:42+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/17.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0340s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 17 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\ead74268232610581671bb552f06be20.php 第 4 行.
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0140s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0170s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\ead74268232610581671bb552f06be20.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.099005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-16T09:03:45+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/15.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0030s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 15 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\ead74268232610581671bb552f06be20.php 第 4 行.
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0040s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\ead74268232610581671bb552f06be20.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-16T09:05:07+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0030s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 29 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0030s ]
+SQL: SELECT `content` FROM `qiqi_category` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0170s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 4 行.
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.104006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-16T09:05:08+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/30.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0030s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 30 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0030s ]
+SQL: SELECT `content` FROM `qiqi_category` WHERE `id` = 30 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 4 行.
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 30 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-16T09:05:09+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0030s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 29 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0030s ]
+SQL: SELECT `content` FROM `qiqi_category` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 4 行.
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-16T09:05:10+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/31.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0040s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 31 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0030s ]
+SQL: SELECT `content` FROM `qiqi_category` WHERE `id` = 31 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 4 行.
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 31 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-16T09:05:10+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0030s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 29 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0030s ]
+SQL: SELECT `content` FROM `qiqi_category` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 4 行.
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-16T09:11:20+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/17.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0030s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 17 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\ead74268232610581671bb552f06be20.php 第 4 行.
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0040s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\ead74268232610581671bb552f06be20.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-06-16T09:11:21+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/50.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0030s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 50 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0030s ]
+SQL: SELECT `content` FROM `qiqi_category` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 4 行.
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-16T09:11:22+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/49.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0040s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 49 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0030s ]
+SQL: SELECT `content` FROM `qiqi_category` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 4 行.
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-16T09:11:24+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/48.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0040s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 48 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0050s ]
+SQL: SELECT `content` FROM `qiqi_category` WHERE `id` = 48 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 4 行.
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 48 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-16T09:11:25+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/46.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0030s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 46 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0030s ]
+SQL: SELECT `content` FROM `qiqi_category` WHERE `id` = 46 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 4 行.
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 46 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-16T09:11:26+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/46.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0020s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 46 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0030s ]
+SQL: SELECT `content` FROM `qiqi_category` WHERE `id` = 46 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 4 行.
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 46 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-16T09:11:28+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/46.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0030s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 46 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0040s ]
+SQL: SELECT `content` FROM `qiqi_category` WHERE `id` = 46 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 4 行.
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 46 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-16T09:13:36+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/46.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0130s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 46 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0130s ]
+SQL: SELECT `content` FROM `qiqi_category` WHERE `id` = 46 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 4 行.
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 46 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-16T09:13:37+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/46.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0040s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 46 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0030s ]
+SQL: SELECT `content` FROM `qiqi_category` WHERE `id` = 46 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 4 行.
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 46 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-16T09:14:26+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/46.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0050s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 46 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0040s ]
+SQL: SELECT `content` FROM `qiqi_category` WHERE `id` = 46 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 4 行.
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 46 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\web\qinghua\App\Runtime\Cache\Home\2199c562c8d13d7a7c1b09280bb71727.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-16T15:57:01+08:00 ] 127.0.0.1 /qinghua/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.022000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.016000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\999186ab6248e6e1d1252ab2a3cab129.php 第 4 行.
+NOTIC: [8] Undefined variable: cid D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\999186ab6248e6e1d1252ab2a3cab129.php 第 52 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\999186ab6248e6e1d1252ab2a3cab129.php 第 54 行.
+SQL: SHOW COLUMNS FROM `qiqi_abc` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `qiqi_abc` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `qiqi_abc_detail` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `qiqi_abc_detail` WHERE `aid` = 1 AND `status` = 1 AND `starttime` < 1466063821 AND `endtime` > 1466063821 ORDER BY sort LIMIT 3   [ RunTime:0.0240s ]
+SQL: SELECT * FROM `qiqi_abc` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT * FROM `qiqi_abc_detail` WHERE `aid` = 1 AND `status` = 1 AND `starttime` < 1466063821 AND `endtime` > 1466063821 ORDER BY sort LIMIT 3   [ RunTime:0.0350s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.284000s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.284000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.012000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.055000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.055000s ]
+
+[ 2016-06-16T15:57:04+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/18.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0320s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 18 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\ead74268232610581671bb552f06be20.php 第 4 行.
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0300s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 18 LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\ead74268232610581671bb552f06be20.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.189000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.189000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-16T15:57:08+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/45.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0730s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 45 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\d9ddae9a03f0cd7fe1a83b12e898fe62.php 第 4 行.
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0240s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 45 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 18 LIMIT 1   [ RunTime:0.0280s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\d9ddae9a03f0cd7fe1a83b12e898fe62.php 第 54 行.
+SQL: SHOW COLUMNS FROM `qiqi_article` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM qiqi_article article LEFT JOIN qiqi_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid IN (45) LIMIT 1   [ RunTime:0.0230s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM qiqi_article article LEFT JOIN qiqi_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid IN (45) ORDER BY article.id DESC LIMIT 0,8   [ RunTime:0.0150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.411000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.412000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-16T15:57:14+08:00 ] 127.0.0.1 /qinghua/index.php?s=/Show/index/cid/45/id/10.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0320s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 45 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `qiqi_article` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `qiqi_article` WHERE `status` = 0 AND `id` = 10 LIMIT 1   [ RunTime:0.0810s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\2e8d9e2595556460800936f53069a552.php 第 4 行.
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0500s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 45 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\2e8d9e2595556460800936f53069a552.php 第 54 行.
+SQL: SELECT `click` FROM `qiqi_article` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0370s ]
+SQL: UPDATE `qiqi_article` SET `click`=click+1 WHERE `id` = 10 [ RunTime:0.0380s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.322000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.322000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-16T15:57:17+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/45.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0290s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 45 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\d9ddae9a03f0cd7fe1a83b12e898fe62.php 第 4 行.
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0360s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 45 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 18 LIMIT 1   [ RunTime:0.0170s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\d9ddae9a03f0cd7fe1a83b12e898fe62.php 第 54 行.
+SQL: SHOW COLUMNS FROM `qiqi_article` [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM qiqi_article article LEFT JOIN qiqi_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid IN (45) LIMIT 1   [ RunTime:0.0260s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM qiqi_article article LEFT JOIN qiqi_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid IN (45) ORDER BY article.id DESC LIMIT 0,8   [ RunTime:0.0120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.229000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.229000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-16T15:57:25+08:00 ] 127.0.0.1 /qinghua/index.php?s=/Show/index/cid/45/id/12.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0260s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 45 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `qiqi_article` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `qiqi_article` WHERE `status` = 0 AND `id` = 12 LIMIT 1   [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\2e8d9e2595556460800936f53069a552.php 第 4 行.
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0360s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 45 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 18 LIMIT 1   [ RunTime:0.0150s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\2e8d9e2595556460800936f53069a552.php 第 54 行.
+SQL: SELECT `click` FROM `qiqi_article` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0130s ]
+SQL: UPDATE `qiqi_article` SET `click`=click+1 WHERE `id` = 12 [ RunTime:0.0150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.366000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.366000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-16T15:57:28+08:00 ] 127.0.0.1 /qinghua/index.php?s=/List/index/cid/45.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `qiqi_category_access` [ RunTime:0.0340s ]
+SQL: SELECT `roleid` FROM `qiqi_category_access` WHERE `catid` = 45 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.1660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant 清化大学工业工程系 - assumed '清化大学工业工程系' D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\d9ddae9a03f0cd7fe1a83b12e898fe62.php 第 4 行.
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0330s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 45 LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT `pid` FROM `qiqi_category` WHERE `id` = 18 LIMIT 1   [ RunTime:0.0180s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW-lufei\qinghua\App\Runtime\Cache\Home\d9ddae9a03f0cd7fe1a83b12e898fe62.php 第 54 行.
+SQL: SHOW COLUMNS FROM `qiqi_article` [ RunTime:0.0550s ]
+SQL: SHOW COLUMNS FROM `qiqi_category` [ RunTime:0.0380s ]
+SQL: SELECT COUNT(*) AS tp_count FROM qiqi_article article LEFT JOIN qiqi_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid IN (45) LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM qiqi_article article LEFT JOIN qiqi_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid IN (45) ORDER BY article.id DESC LIMIT 0,8   [ RunTime:0.0540s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.315000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.317000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+

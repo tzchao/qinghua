@@ -1,0 +1,27 @@
+<div class="cont-right">
+    <!--发展历程-->
+    <div class="column-tit"><i></i>{$cate.name}
+      <form class="sear">
+          <input type="text" class="txt">
+          <input type="submit" class="sub" value="">
+      </form>
+    </div>
+    <ul class="teacher">
+    	<qiqi:list typeid="$cid" limit="100" field="id,title,color,zhiwu,zhicheng,yjfx,ename,jumpurl,cid,litpic">
+	       <li>
+	         <div class="box">
+	           <a href="{$list.url}" class="trans-hover pic"><img src="<if condition="empty($list['litpic'])">__PUBLIC__/qh_images/nopic_z.png<else />{$list.litpic}</if>" class="img-responsive trans" alt=""></a>
+	           <div class="desc">
+	             <h2 class="overhidden" title="{$list.title}" style="color:{$list.color}">{$list.title}</h2>
+	             <p class="">{:L('_L_ZHICHENG')}：{$list.zhicheng}</p>
+	             <p class="overhidden">{:L('_L_ZHIWU')}：{$list.zhiwu}</p>
+	             <p class="overhidden">{:L('_L_YJFX')}：{$list.yjfx}</p>
+	           </div>
+	           <a href="{$list.url}" class="more">{:L('_L_MOREDES')}></a>
+	         </div>
+	       </li>
+       </qiqi:list>
+       <if condition="count($list) EQ 0"><p class="indent-2">{:L('_L_NOCONTENT')}</p></if>
+     </ul>
+  </div>
+  <div class="clear"></div>

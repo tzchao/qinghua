@@ -1,0 +1,23 @@
+ <div class="cont-right">
+    <!--发展历程-->
+    <div class="column-tit">
+		<i></i>{$cate.name}
+	</div>
+		<ul class="menu-list news-list">
+		<qiqi:list pagesize='8'>
+		  <li>
+			<div class="box">
+			  <a class="trans-hover pic" href="{$list.url}"><img src="<if condition="empty($list['litpic'])">__PUBLIC__/qh_images/nopic_len.png<else />{$list.litpic}</if>" class="trans" alt="{$list.title}"></a>
+			  <h2><i>{$list.catename}</i><span></span>{$list.title}</h2>
+			  <div class="fu">
+				<span class="date">{$list.publishtime|date='Y.m.d',###}</span>
+				<span class="read">{:L('_L_SEE')}（{$list.click}）</span>
+			  </div>
+			  <p>{$list.description|str2sub=105,1}&nbsp;<a class="more" href="{$list.url}">[{:L('_L_MORE')}]</a></p>
+			</div>
+		  </li>
+		</qiqi:list>
+		</ul>
+		{$page}
+  </div>
+<div class="clear"></div>

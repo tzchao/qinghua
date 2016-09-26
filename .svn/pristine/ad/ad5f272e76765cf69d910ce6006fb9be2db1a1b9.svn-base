@@ -1,0 +1,18 @@
+<!-- 教育教学 -->
+<include file="Public:meta" />
+<include file="Public:header" />
+<!-- 网站主题 -->
+<section>
+	<!-- 导航开始 -->
+	<include file="Public:navbar" />
+	<!-- banner-->
+	<include file="Public:banner" />
+	<!-- 内容主体 -->
+	<div class="ny-main container">
+		<!--左侧栏-->
+		<include file="Menu:left" />
+		<include file="Edu:right" />
+		<div class="clear"></div>
+	</div>
+</section>
+<include file="Public:footer" />

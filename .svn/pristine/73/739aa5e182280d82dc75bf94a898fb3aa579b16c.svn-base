@@ -1,0 +1,7 @@
+<div class="warp1 mt" id="bottom">
+	<a href="<qiqi:siteurl />"><qiqi:sitename /></a>版权所有
+	<br />
+	联系地址：<qiqi:address />  电话：<qiqi:phone /><br />
+	Copyright © 2014-2014 QIQICMS. 奇奇科技 版权所有 <a href="http://www.qiqikeji.com" target="_blank">Power by QIQICMS</a>
+</div>
+<qiqi:online />

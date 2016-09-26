@@ -1,0 +1,44 @@
+<!-- 发展历程页面 -->
+<link href="__PUBLIC__/css/stylesv.css" rel="stylesheet"><!--时间轴-->
+<link href="__PUBLIC__/css/jquery.mCustomScrollbar.css" rel="stylesheet"><!--自定义滚动条-->
+<include file="Public:meta" />
+<include file="Public:header" />
+<!-- 网站主题 -->
+<section>
+	<!-- 导航开始 -->
+	<include file="Public:navbar" />
+	<!-- 内页banner -->
+	<include file="Public:banner" />
+	<!-- 内容主体 -->
+	<div class="ny-main container">
+		<!--左侧栏-->
+		<include file="Menu:left" />
+		<!-- 主体内容右侧 -->
+		<include file="Devel:right" />
+	</div>
+</section>
+<include file="Public:footer" />
+
+<!--时间轴-->
+<script type="text/javascript" src="__PUBLIC__/qh_js/jquery.mCustomScrollbar.concat.min.js"></script><!--自定义滚动条-->
+<script>
+    (function($){
+        $(window).load(function(){
+            $("#issues li").mCustomScrollbar();
+        });
+    })(jQuery);
+</script>
+<!--时间轴-->
+<script type="text/javascript" src="__PUBLIC__/qh_js/jquery.timelinr-0.9.4.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $().timelinr({
+      orientation: 'vertical',
+      issuesSpeed: 300,
+      datesSpeed: 100,
+      issuesSpeed: 650,
+      arrowKeys: 'true',
+      startAt: 1
+    })
+  });
+</script>

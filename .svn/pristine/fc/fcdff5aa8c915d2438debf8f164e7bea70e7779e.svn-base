@@ -1,0 +1,5 @@
+<div class="ny-banner">
+		<qiqi:type typeid="$pid">
+			<img src="{$type.catpic}" class="img-responsive" alt="{$type.name}">
+		</qiqi:type>
+	</div>

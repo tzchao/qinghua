@@ -1,0 +1,73 @@
+<div class="cont-right">
+		<!--发展历程-->
+		<div class="column-tit">
+			<i></i>{$cate.name}
+		</div>
+		<div class="content">
+			<p></p>
+			<p class="indent-2">{$cate.description}</p>
+			<p></p>
+		</div>
+		<div class="menu-list">
+		
+			<qiqi:catlist typeid="$cid" flag="1">
+				<li>
+					<div class="box">
+						<a class="trans-hover pic" href="{$catlist.url}"><img
+							src="<if condition="empty($catlist['catpic'])">__PUBLIC__/qh_images/nopic_len.png<else />{$catlist.catpic}</if>" class="trans" alt=""></a>
+						<h2>
+							<i></i>{$catlist.name}
+						</h2>
+							<if condition="empty($catlist['description'])"><p onclick="javascript:location.href='{$catlist.url}'">{:L('_L_CATNODES')}</p><else /><p class="clamp row4" title="{$catlist.description}" onclick="javascript:location.href='{$catlist.url}'">{$catlist.description}</p></if>
+					</div>
+				</li>
+			</qiqi:catlist>
+			
+		</div>
+		<div class="news-project">
+			<div class="tit">
+				<span>项目动态</span>
+			</div>
+			<ul>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕工程硕士研究生论文指导论坛开幕工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+				<li><a href="content.html"><i></i>
+					<h1>清华大学2016年 -工程硕士研究生论文指导论坛开幕</h1>
+						<span>2016-05-25</span></a></li>
+			</ul>
+			<div class="fenye">
+				<a href="">上一页</a> <a class="curr num">1</a> <a class="num" href="">2</a>
+				<a class="num" href="">3</a> <a class="num" href="">4</a> <a
+					class="num" href="">5</a> <a class="num" href="">6</a> <a
+					class="num" href="">7</a> <a class="num" href="">8</a> <a
+					class="num" href="">9</a> <a class="num" href="">10</a> <span
+					class="num">…</span> <a class="num" href="">100</a> <a href="">下一页</a>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>

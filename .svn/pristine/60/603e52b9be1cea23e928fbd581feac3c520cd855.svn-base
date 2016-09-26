@@ -1,0 +1,1044 @@
+[ 2016-06-07T13:20:06+08:00 ] 127.0.0.1 /cms/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276806 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_abc` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `xyh_abc` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_abc_detail` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyh_abc_detail` WHERE `aid` = 1 AND `status` = 1 AND `starttime` < 1465276806 AND `endtime` > 1465276806 ORDER BY sort LIMIT 2   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `xyh_model` [ RunTime:0.0020s ]
+SQL: SELECT model.id,model.name FROM xyh_model model WHERE ( id != 2 ) ORDER BY id LIMIT 30   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `xyh_category` [ RunTime:0.0030s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_article article LEFT JOIN xyh_category category ON article.cid = category.id WHERE article.status = 0 ORDER BY article.id DESC LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_article article LEFT JOIN xyh_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid IN ('2','3','4') ORDER BY article.id DESC LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_product` [ RunTime:0.0030s ]
+SQL: SELECT product.id AS id,product.title AS title,product.color AS color,product.keywords AS keywords,product.litpic AS litpic,product.description AS description,product.price AS price,product.marketprice AS marketprice,product.brand AS brand,product.units AS units,product.specification AS specification,product.publishtime AS publishtime,product.updatetime AS updatetime,product.click AS click,product.cid AS cid,product.commentflag AS commentflag,product.flag AS flag,product.jumpurl AS jumpurl,product.status AS status,product.userid AS userid,product.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_product product LEFT JOIN xyh_category category ON product.cid = category.id WHERE product.status = 0 AND product.cid IN ('5','6','7') ORDER BY product.id DESC LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_picture` [ RunTime:0.0030s ]
+SQL: SELECT picture.id AS id,picture.title AS title,picture.color AS color,picture.keywords AS keywords,picture.litpic AS litpic,picture.description AS description,picture.copyfrom AS copyfrom,picture.template AS template,picture.publishtime AS publishtime,picture.updatetime AS updatetime,picture.click AS click,picture.cid AS cid,picture.commentflag AS commentflag,picture.flag AS flag,picture.jumpurl AS jumpurl,picture.status AS status,picture.userid AS userid,picture.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_picture picture LEFT JOIN xyh_category category ON picture.cid = category.id WHERE picture.status = 0 AND picture.cid IN ('8') ORDER BY picture.id DESC LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT product.id AS id,product.title AS title,product.color AS color,product.keywords AS keywords,product.litpic AS litpic,product.description AS description,product.price AS price,product.marketprice AS marketprice,product.brand AS brand,product.units AS units,product.specification AS specification,product.publishtime AS publishtime,product.updatetime AS updatetime,product.click AS click,product.cid AS cid,product.commentflag AS commentflag,product.flag AS flag,product.jumpurl AS jumpurl,product.status AS status,product.userid AS userid,product.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_product product LEFT JOIN xyh_category category ON product.cid = category.id WHERE product.status = 0 ORDER BY product.id DESC LIMIT 10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `xyh_link` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyh_link` WHERE `id` > 0 ORDER BY sort ASC LIMIT 20   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:20:06+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:20:07+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:20:09+08:00 ] 127.0.0.1 /cms/index.php?s=/Special/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276809 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `xyh_special` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `xyh_category` [ RunTime:0.0050s ]
+SQL: SELECT special.id AS id,special.title AS title,special.shorttitle AS shorttitle,special.color AS color,special.author AS author,special.keywords AS keywords,special.litpic AS litpic,special.description AS description,special.publishtime AS publishtime,special.updatetime AS updatetime,special.click AS click,special.cid AS cid,special.commentflag AS commentflag,special.flag AS flag,special.jumpurl AS jumpurl,special.status AS status,special.filename AS filename,special.template AS template,special.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_special special LEFT JOIN xyh_category category ON special.cid = category.id WHERE special.status = 0 ORDER BY special.id DESC LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xyh_special special LEFT JOIN xyh_category category ON special.cid = category.id WHERE special.status = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT special.id AS id,special.title AS title,special.shorttitle AS shorttitle,special.color AS color,special.author AS author,special.keywords AS keywords,special.litpic AS litpic,special.description AS description,special.publishtime AS publishtime,special.updatetime AS updatetime,special.click AS click,special.cid AS cid,special.commentflag AS commentflag,special.flag AS flag,special.jumpurl AS jumpurl,special.status AS status,special.filename AS filename,special.template AS template,special.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_special special LEFT JOIN xyh_category category ON special.cid = category.id WHERE special.status = 0 ORDER BY special.id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:20:09+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:20:10+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:20:12+08:00 ] 127.0.0.1 /cms/index.php?s=/Special/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276811 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `xyh_special` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `xyh_category` [ RunTime:0.0040s ]
+SQL: SELECT special.id AS id,special.title AS title,special.shorttitle AS shorttitle,special.color AS color,special.author AS author,special.keywords AS keywords,special.litpic AS litpic,special.description AS description,special.publishtime AS publishtime,special.updatetime AS updatetime,special.click AS click,special.cid AS cid,special.commentflag AS commentflag,special.flag AS flag,special.jumpurl AS jumpurl,special.status AS status,special.filename AS filename,special.template AS template,special.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_special special LEFT JOIN xyh_category category ON special.cid = category.id WHERE special.status = 0 ORDER BY special.id DESC LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xyh_special special LEFT JOIN xyh_category category ON special.cid = category.id WHERE special.status = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT special.id AS id,special.title AS title,special.shorttitle AS shorttitle,special.color AS color,special.author AS author,special.keywords AS keywords,special.litpic AS litpic,special.description AS description,special.publishtime AS publishtime,special.updatetime AS updatetime,special.click AS click,special.cid AS cid,special.commentflag AS commentflag,special.flag AS flag,special.jumpurl AS jumpurl,special.status AS status,special.filename AS filename,special.template AS template,special.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_special special LEFT JOIN xyh_category category ON special.cid = category.id WHERE special.status = 0 ORDER BY special.id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:20:12+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:20:12+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:20:12+08:00 ] 127.0.0.1 /cms/index.php?s=/Special/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276812 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_special` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `xyh_category` [ RunTime:0.0040s ]
+SQL: SELECT special.id AS id,special.title AS title,special.shorttitle AS shorttitle,special.color AS color,special.author AS author,special.keywords AS keywords,special.litpic AS litpic,special.description AS description,special.publishtime AS publishtime,special.updatetime AS updatetime,special.click AS click,special.cid AS cid,special.commentflag AS commentflag,special.flag AS flag,special.jumpurl AS jumpurl,special.status AS status,special.filename AS filename,special.template AS template,special.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_special special LEFT JOIN xyh_category category ON special.cid = category.id WHERE special.status = 0 ORDER BY special.id DESC LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xyh_special special LEFT JOIN xyh_category category ON special.cid = category.id WHERE special.status = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT special.id AS id,special.title AS title,special.shorttitle AS shorttitle,special.color AS color,special.author AS author,special.keywords AS keywords,special.litpic AS litpic,special.description AS description,special.publishtime AS publishtime,special.updatetime AS updatetime,special.click AS click,special.cid AS cid,special.commentflag AS commentflag,special.flag AS flag,special.jumpurl AS jumpurl,special.status AS status,special.filename AS filename,special.template AS template,special.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_special special LEFT JOIN xyh_category category ON special.cid = category.id WHERE special.status = 0 ORDER BY special.id DESC LIMIT 0,10   [ RunTime:0.0040s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:20:12+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:20:12+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:20:46+08:00 ] 127.0.0.1 /cms/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276846 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_abc` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `xyh_abc` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `xyh_abc_detail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `xyh_abc_detail` WHERE `aid` = 1 AND `status` = 1 AND `starttime` < 1465276846 AND `endtime` > 1465276846 ORDER BY sort LIMIT 2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_model` [ RunTime:0.0020s ]
+SQL: SELECT model.id,model.name FROM xyh_model model WHERE ( id != 2 ) ORDER BY id LIMIT 30   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `xyh_category` [ RunTime:0.0020s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_article article LEFT JOIN xyh_category category ON article.cid = category.id WHERE article.status = 0 ORDER BY article.id DESC LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_article article LEFT JOIN xyh_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid IN ('2','3','4') ORDER BY article.id DESC LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_product` [ RunTime:0.0040s ]
+SQL: SELECT product.id AS id,product.title AS title,product.color AS color,product.keywords AS keywords,product.litpic AS litpic,product.description AS description,product.price AS price,product.marketprice AS marketprice,product.brand AS brand,product.units AS units,product.specification AS specification,product.publishtime AS publishtime,product.updatetime AS updatetime,product.click AS click,product.cid AS cid,product.commentflag AS commentflag,product.flag AS flag,product.jumpurl AS jumpurl,product.status AS status,product.userid AS userid,product.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_product product LEFT JOIN xyh_category category ON product.cid = category.id WHERE product.status = 0 AND product.cid IN ('5','6','7') ORDER BY product.id DESC LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_picture` [ RunTime:0.0030s ]
+SQL: SELECT picture.id AS id,picture.title AS title,picture.color AS color,picture.keywords AS keywords,picture.litpic AS litpic,picture.description AS description,picture.copyfrom AS copyfrom,picture.template AS template,picture.publishtime AS publishtime,picture.updatetime AS updatetime,picture.click AS click,picture.cid AS cid,picture.commentflag AS commentflag,picture.flag AS flag,picture.jumpurl AS jumpurl,picture.status AS status,picture.userid AS userid,picture.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_picture picture LEFT JOIN xyh_category category ON picture.cid = category.id WHERE picture.status = 0 AND picture.cid IN ('8') ORDER BY picture.id DESC LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT product.id AS id,product.title AS title,product.color AS color,product.keywords AS keywords,product.litpic AS litpic,product.description AS description,product.price AS price,product.marketprice AS marketprice,product.brand AS brand,product.units AS units,product.specification AS specification,product.publishtime AS publishtime,product.updatetime AS updatetime,product.click AS click,product.cid AS cid,product.commentflag AS commentflag,product.flag AS flag,product.jumpurl AS jumpurl,product.status AS status,product.userid AS userid,product.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_product product LEFT JOIN xyh_category category ON product.cid = category.id WHERE product.status = 0 ORDER BY product.id DESC LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_link` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `xyh_link` WHERE `id` > 0 ORDER BY sort ASC LIMIT 20   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:20:46+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:20:46+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:25+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276885 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:25+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:26+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:30+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_member` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `xyh_member` WHERE `email` = '642487559@qq.com' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `xyh_member` SET `logintime`='1465276890',`loginip`='127.0.0.1',`loginnum`='2' WHERE `id` = 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:31+08:00 ] 127.0.0.1 /cms/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276891 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `xyh_abc` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `xyh_abc` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_abc_detail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `xyh_abc_detail` WHERE `aid` = 1 AND `status` = 1 AND `starttime` < 1465276891 AND `endtime` > 1465276891 ORDER BY sort LIMIT 2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_model` [ RunTime:0.0030s ]
+SQL: SELECT model.id,model.name FROM xyh_model model WHERE ( id != 2 ) ORDER BY id LIMIT 30   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_article` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `xyh_category` [ RunTime:0.0030s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_article article LEFT JOIN xyh_category category ON article.cid = category.id WHERE article.status = 0 ORDER BY article.id DESC LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_article article LEFT JOIN xyh_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid IN ('2','3','4') ORDER BY article.id DESC LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_product` [ RunTime:0.0030s ]
+SQL: SELECT product.id AS id,product.title AS title,product.color AS color,product.keywords AS keywords,product.litpic AS litpic,product.description AS description,product.price AS price,product.marketprice AS marketprice,product.brand AS brand,product.units AS units,product.specification AS specification,product.publishtime AS publishtime,product.updatetime AS updatetime,product.click AS click,product.cid AS cid,product.commentflag AS commentflag,product.flag AS flag,product.jumpurl AS jumpurl,product.status AS status,product.userid AS userid,product.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_product product LEFT JOIN xyh_category category ON product.cid = category.id WHERE product.status = 0 AND product.cid IN ('5','6','7') ORDER BY product.id DESC LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_picture` [ RunTime:0.0030s ]
+SQL: SELECT picture.id AS id,picture.title AS title,picture.color AS color,picture.keywords AS keywords,picture.litpic AS litpic,picture.description AS description,picture.copyfrom AS copyfrom,picture.template AS template,picture.publishtime AS publishtime,picture.updatetime AS updatetime,picture.click AS click,picture.cid AS cid,picture.commentflag AS commentflag,picture.flag AS flag,picture.jumpurl AS jumpurl,picture.status AS status,picture.userid AS userid,picture.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_picture picture LEFT JOIN xyh_category category ON picture.cid = category.id WHERE picture.status = 0 AND picture.cid IN ('8') ORDER BY picture.id DESC LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT product.id AS id,product.title AS title,product.color AS color,product.keywords AS keywords,product.litpic AS litpic,product.description AS description,product.price AS price,product.marketprice AS marketprice,product.brand AS brand,product.units AS units,product.specification AS specification,product.publishtime AS publishtime,product.updatetime AS updatetime,product.click AS click,product.cid AS cid,product.commentflag AS commentflag,product.flag AS flag,product.jumpurl AS jumpurl,product.status AS status,product.userid AS userid,product.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_product product LEFT JOIN xyh_category category ON product.cid = category.id WHERE product.status = 0 ORDER BY product.id DESC LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_link` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `xyh_link` WHERE `id` > 0 ORDER BY sort ASC LIMIT 20   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:31+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:31+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:33+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_member` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `xyh_membergroup` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `xyh_memberdetail` [ RunTime:0.0040s ]
+SQL: SELECT member.id AS id,member.email AS email,member.nickname AS nickname,member.amount AS amount,member.score AS score,member.face AS face,member.regtime AS regtime,member.logintime AS logintime,member.loginip AS loginip,member.loginnum AS loginnum,member.groupid AS groupid,member.message AS message,member.status AS status,member.islock AS islock,membergroup.name AS groupname,memberdetail.userid AS userid,memberdetail.sex AS sex,memberdetail.realname AS realname,memberdetail.birthday AS birthday,memberdetail.province AS province,memberdetail.area AS area,memberdetail.address AS address,memberdetail.qq AS qq,memberdetail.tel AS tel,memberdetail.mobile AS mobile,memberdetail.animal AS animal,memberdetail.star AS star,memberdetail.blood AS blood,memberdetail.marital AS marital,memberdetail.education AS education,memberdetail.vocation AS vocation,memberdetail.income AS income,memberdetail.maxim AS maxim,memberdetail.updatetime AS updatetime FROM xyh_member member LEFT JOIN xyh_membergroup membergroup ON member.groupid = membergroup.id LEFT JOIN xyh_memberdetail memberdetail ON member.id = memberdetail.userid WHERE member.id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `xyh_memberdetail` WHERE `userid` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276893 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:33+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:33+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:35+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_member` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `xyh_membergroup` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `xyh_memberdetail` [ RunTime:0.0030s ]
+SQL: SELECT member.id AS id,member.email AS email,member.nickname AS nickname,member.amount AS amount,member.score AS score,member.face AS face,member.regtime AS regtime,member.logintime AS logintime,member.loginip AS loginip,member.loginnum AS loginnum,member.groupid AS groupid,member.message AS message,member.status AS status,member.islock AS islock,membergroup.name AS groupname,memberdetail.userid AS userid,memberdetail.sex AS sex,memberdetail.realname AS realname,memberdetail.birthday AS birthday,memberdetail.province AS province,memberdetail.area AS area,memberdetail.address AS address,memberdetail.qq AS qq,memberdetail.tel AS tel,memberdetail.mobile AS mobile,memberdetail.animal AS animal,memberdetail.star AS star,memberdetail.blood AS blood,memberdetail.marital AS marital,memberdetail.education AS education,memberdetail.vocation AS vocation,memberdetail.income AS income,memberdetail.maxim AS maxim,memberdetail.updatetime AS updatetime FROM xyh_member member LEFT JOIN xyh_membergroup membergroup ON member.groupid = membergroup.id LEFT JOIN xyh_memberdetail memberdetail ON member.id = memberdetail.userid WHERE member.id = '1' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyh_memberdetail` WHERE `userid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276895 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:35+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:35+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:36+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_member` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `xyh_membergroup` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `xyh_memberdetail` [ RunTime:0.0030s ]
+SQL: SELECT member.id AS id,member.email AS email,member.nickname AS nickname,member.amount AS amount,member.score AS score,member.face AS face,member.regtime AS regtime,member.logintime AS logintime,member.loginip AS loginip,member.loginnum AS loginnum,member.groupid AS groupid,member.message AS message,member.status AS status,member.islock AS islock,membergroup.name AS groupname,memberdetail.userid AS userid,memberdetail.sex AS sex,memberdetail.realname AS realname,memberdetail.birthday AS birthday,memberdetail.province AS province,memberdetail.area AS area,memberdetail.address AS address,memberdetail.qq AS qq,memberdetail.tel AS tel,memberdetail.mobile AS mobile,memberdetail.animal AS animal,memberdetail.star AS star,memberdetail.blood AS blood,memberdetail.marital AS marital,memberdetail.education AS education,memberdetail.vocation AS vocation,memberdetail.income AS income,memberdetail.maxim AS maxim,memberdetail.updatetime AS updatetime FROM xyh_member member LEFT JOIN xyh_membergroup membergroup ON member.groupid = membergroup.id LEFT JOIN xyh_memberdetail memberdetail ON member.id = memberdetail.userid WHERE member.id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `xyh_memberdetail` WHERE `userid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276896 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:36+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:36+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:37+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_member` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `xyh_membergroup` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `xyh_memberdetail` [ RunTime:0.0030s ]
+SQL: SELECT member.id AS id,member.email AS email,member.nickname AS nickname,member.amount AS amount,member.score AS score,member.face AS face,member.regtime AS regtime,member.logintime AS logintime,member.loginip AS loginip,member.loginnum AS loginnum,member.groupid AS groupid,member.message AS message,member.status AS status,member.islock AS islock,membergroup.name AS groupname,memberdetail.userid AS userid,memberdetail.sex AS sex,memberdetail.realname AS realname,memberdetail.birthday AS birthday,memberdetail.province AS province,memberdetail.area AS area,memberdetail.address AS address,memberdetail.qq AS qq,memberdetail.tel AS tel,memberdetail.mobile AS mobile,memberdetail.animal AS animal,memberdetail.star AS star,memberdetail.blood AS blood,memberdetail.marital AS marital,memberdetail.education AS education,memberdetail.vocation AS vocation,memberdetail.income AS income,memberdetail.maxim AS maxim,memberdetail.updatetime AS updatetime FROM xyh_member member LEFT JOIN xyh_membergroup membergroup ON member.groupid = membergroup.id LEFT JOIN xyh_memberdetail memberdetail ON member.id = memberdetail.userid WHERE member.id = '1' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyh_memberdetail` WHERE `userid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276897 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:37+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:37+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:37+08:00 ] 127.0.0.1 /cms/index.php?s=/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_member` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `xyh_membergroup` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `xyh_memberdetail` [ RunTime:0.0030s ]
+SQL: SELECT member.id AS id,member.email AS email,member.nickname AS nickname,member.amount AS amount,member.score AS score,member.face AS face,member.regtime AS regtime,member.logintime AS logintime,member.loginip AS loginip,member.loginnum AS loginnum,member.groupid AS groupid,member.message AS message,member.status AS status,member.islock AS islock,membergroup.name AS groupname,memberdetail.userid AS userid,memberdetail.sex AS sex,memberdetail.realname AS realname,memberdetail.birthday AS birthday,memberdetail.province AS province,memberdetail.area AS area,memberdetail.address AS address,memberdetail.qq AS qq,memberdetail.tel AS tel,memberdetail.mobile AS mobile,memberdetail.animal AS animal,memberdetail.star AS star,memberdetail.blood AS blood,memberdetail.marital AS marital,memberdetail.education AS education,memberdetail.vocation AS vocation,memberdetail.income AS income,memberdetail.maxim AS maxim,memberdetail.updatetime AS updatetime FROM xyh_member member LEFT JOIN xyh_membergroup membergroup ON member.groupid = membergroup.id LEFT JOIN xyh_memberdetail memberdetail ON member.id = memberdetail.userid WHERE member.id = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `xyh_memberdetail` WHERE `userid` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276897 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:37+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:37+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:38+08:00 ] 127.0.0.1 /cms/index.php?s=/Member/name.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_member` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `xyh_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276898 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:38+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:38+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:39+08:00 ] 127.0.0.1 /cms/index.php?s=/Member/person.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xyh_memberdetail` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `xyh_memberdetail` WHERE `userid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276899 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:39+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:39+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:39+08:00 ] 127.0.0.1 /cms/index.php?s=/Member/password.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276899 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:39+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:39+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:40+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:41+08:00 ] 127.0.0.1 /cms/index.php?s=/Member/password.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:41+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276901 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:41+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:41+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:42+08:00 ] 127.0.0.1 /cms/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276902 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `xyh_abc` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `xyh_abc` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `xyh_abc_detail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `xyh_abc_detail` WHERE `aid` = 1 AND `status` = 1 AND `starttime` < 1465276902 AND `endtime` > 1465276902 ORDER BY sort LIMIT 2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_model` [ RunTime:0.0040s ]
+SQL: SELECT model.id,model.name FROM xyh_model model WHERE ( id != 2 ) ORDER BY id LIMIT 30   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `xyh_category` [ RunTime:0.0050s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_article article LEFT JOIN xyh_category category ON article.cid = category.id WHERE article.status = 0 ORDER BY article.id DESC LIMIT 8   [ RunTime:0.0020s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_article article LEFT JOIN xyh_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid IN ('2','3','4') ORDER BY article.id DESC LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `xyh_product` [ RunTime:0.0040s ]
+SQL: SELECT product.id AS id,product.title AS title,product.color AS color,product.keywords AS keywords,product.litpic AS litpic,product.description AS description,product.price AS price,product.marketprice AS marketprice,product.brand AS brand,product.units AS units,product.specification AS specification,product.publishtime AS publishtime,product.updatetime AS updatetime,product.click AS click,product.cid AS cid,product.commentflag AS commentflag,product.flag AS flag,product.jumpurl AS jumpurl,product.status AS status,product.userid AS userid,product.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_product product LEFT JOIN xyh_category category ON product.cid = category.id WHERE product.status = 0 AND product.cid IN ('5','6','7') ORDER BY product.id DESC LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `xyh_picture` [ RunTime:0.0040s ]
+SQL: SELECT picture.id AS id,picture.title AS title,picture.color AS color,picture.keywords AS keywords,picture.litpic AS litpic,picture.description AS description,picture.copyfrom AS copyfrom,picture.template AS template,picture.publishtime AS publishtime,picture.updatetime AS updatetime,picture.click AS click,picture.cid AS cid,picture.commentflag AS commentflag,picture.flag AS flag,picture.jumpurl AS jumpurl,picture.status AS status,picture.userid AS userid,picture.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_picture picture LEFT JOIN xyh_category category ON picture.cid = category.id WHERE picture.status = 0 AND picture.cid IN ('8') ORDER BY picture.id DESC LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT product.id AS id,product.title AS title,product.color AS color,product.keywords AS keywords,product.litpic AS litpic,product.description AS description,product.price AS price,product.marketprice AS marketprice,product.brand AS brand,product.units AS units,product.specification AS specification,product.publishtime AS publishtime,product.updatetime AS updatetime,product.click AS click,product.cid AS cid,product.commentflag AS commentflag,product.flag AS flag,product.jumpurl AS jumpurl,product.status AS status,product.userid AS userid,product.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_product product LEFT JOIN xyh_category category ON product.cid = category.id WHERE product.status = 0 ORDER BY product.id DESC LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_link` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `xyh_link` WHERE `id` > 0 ORDER BY sort ASC LIMIT 20   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:42+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:43+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:43+08:00 ] 127.0.0.1 /cms/index.php?s=/Special/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276903 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_special` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `xyh_category` [ RunTime:0.0030s ]
+SQL: SELECT special.id AS id,special.title AS title,special.shorttitle AS shorttitle,special.color AS color,special.author AS author,special.keywords AS keywords,special.litpic AS litpic,special.description AS description,special.publishtime AS publishtime,special.updatetime AS updatetime,special.click AS click,special.cid AS cid,special.commentflag AS commentflag,special.flag AS flag,special.jumpurl AS jumpurl,special.status AS status,special.filename AS filename,special.template AS template,special.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_special special LEFT JOIN xyh_category category ON special.cid = category.id WHERE special.status = 0 ORDER BY special.id DESC LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xyh_special special LEFT JOIN xyh_category category ON special.cid = category.id WHERE special.status = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT special.id AS id,special.title AS title,special.shorttitle AS shorttitle,special.color AS color,special.author AS author,special.keywords AS keywords,special.litpic AS litpic,special.description AS description,special.publishtime AS publishtime,special.updatetime AS updatetime,special.click AS click,special.cid AS cid,special.commentflag AS commentflag,special.flag AS flag,special.jumpurl AS jumpurl,special.status AS status,special.filename AS filename,special.template AS template,special.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_special special LEFT JOIN xyh_category category ON special.cid = category.id WHERE special.status = 0 ORDER BY special.id DESC LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:43+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:43+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:44+08:00 ] 127.0.0.1 /cms/index.php?s=/List/index/cid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_category_access` [ RunTime:0.0070s ]
+SQL: SELECT `roleid` FROM `xyh_category_access` WHERE `catid` = 2 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276904 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `xyh_article` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `xyh_category` [ RunTime:0.0020s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_article article LEFT JOIN xyh_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid IN (2,'3','4') ORDER BY article.id DESC LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xyh_article article LEFT JOIN xyh_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid IN ('2','3','4') LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_article article LEFT JOIN xyh_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid IN ('2','3','4') ORDER BY article.id DESC LIMIT 0,15   [ RunTime:0.0020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-06-07T13:21:44+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:44+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:46+08:00 ] 127.0.0.1 /cms/index.php?s=/Show/index/cid/4/id/16.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_category_access` [ RunTime:0.0050s ]
+SQL: SELECT `roleid` FROM `xyh_category_access` WHERE `catid` = 4 AND `flag` = 0 AND `action` = 'visit'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `xyh_article` WHERE `status` = 0 AND `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xyh_announce` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `xyh_announce` WHERE `endtime` > 1465276906 ORDER BY starttime DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyh_category` [ RunTime:0.0060s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_article article LEFT JOIN xyh_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid IN (4) ORDER BY article.id DESC LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT `click` FROM `xyh_article` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `xyh_article` SET `click`=click+1 WHERE `id` = 16 [ RunTime:0.0010s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.content AS content,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_article article LEFT JOIN xyh_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid = '4' AND article.id < '16' ORDER BY article.id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT article.id AS id,article.title AS title,article.shorttitle AS shorttitle,article.color AS color,article.copyfrom AS copyfrom,article.author AS author,article.keywords AS keywords,article.litpic AS litpic,article.content AS content,article.description AS description,article.publishtime AS publishtime,article.updatetime AS updatetime,article.click AS click,article.cid AS cid,article.commentflag AS commentflag,article.flag AS flag,article.jumpurl AS jumpurl,article.status AS status,article.userid AS userid,article.aid AS aid,category.name AS catename,category.ename AS ename,category.modelid AS modelid FROM xyh_article article LEFT JOIN xyh_category category ON article.cid = category.id WHERE article.status = 0 AND article.cid = '4' AND article.id > '16' ORDER BY article.id ASC LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:46+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:47+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Public/online.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-06-07T13:21:47+08:00 ] 127.0.0.1 /cms/index.php?s=/Public/loginChk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T13:21:48+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Review/getlist.html&model_id=1&post_id=16&num=5&page=1&avatar=middle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `xyh_comment` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `xyh_model` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `xyh_member` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xyh_comment comment LEFT JOIN xyh_model model ON comment.modelid = model.id LEFT JOIN xyh_member member ON comment.userid = member.id WHERE comment.pid = 0 AND comment.postid = 16 AND comment.modelid = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT comment.id AS id,comment.postid AS postid,comment.modelid AS modelid,comment.title AS title,comment.username AS username,comment.email AS email,comment.ip AS ip,comment.agent AS agent,comment.posttime AS posttime,comment.content AS content,comment.status AS status,comment.pid AS pid,comment.userid AS userid,model.name AS modelname,model.tablename AS tablename,member.face AS face,member.nickname AS nickname FROM xyh_comment comment LEFT JOIN xyh_model model ON comment.modelid = model.id LEFT JOIN xyh_member member ON comment.userid = member.id WHERE comment.pid = 0 AND comment.postid = 16 AND comment.modelid = 1 ORDER BY comment.id DESC LIMIT 0,5   [ RunTime:0.0010s ]
+
+[ 2016-06-07T13:21:52+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Review/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T13:21:56+08:00 ] 127.0.0.1 /cms/index.php?s=/Home/Review/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `xyh_comment` [ RunTime:0.0040s ]
+SQL: INSERT INTO `xyh_comment` (`postid`,`modelid`,`pid`,`title`,`content`,`posttime`,`ip`,`agent`,`userid`,`username`,`email`) VALUES ('16','1','0','微软要让Windows Phone成为中国手游一线战场','asdf','1465276916','127.0.0.1','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36','0','游客','') [ RunTime:0.0010s ]
+

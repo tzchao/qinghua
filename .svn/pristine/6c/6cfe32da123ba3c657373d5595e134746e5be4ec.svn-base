@@ -1,0 +1,44 @@
+<link href="__PUBLIC__/css/stylesv.css" rel="stylesheet"><!--时间轴-->
+<link href="__PUBLIC__/css/jquery.mCustomScrollbar.css" rel="stylesheet"><!--自定义滚动条-->
+<include file="Public:meta" />
+<include file="Public:header" />
+<!-- 网站主题 -->
+<section>
+	<!-- 导航开始 -->
+	<include file="Public:navbar" />
+	<!-- 内页banner -->
+	<div class="ny-banner">
+		<qiqi:abc id='3' limit='1'>
+			<img src="{$abc.content}" class="img-responsive" alt="">
+		</qiqi:abc>
+	</div>
+	<!-- 内容主体 -->
+	<div class="ny-main container">
+		  <!--左侧栏-->
+		
+		  <div class="cont-right search-res">
+		    <!--发展历程-->
+		    <div class="column-tit"><i></i>{:L('_L_S_SOU')}</div>
+		    <div class="news-project">
+		      <ul>
+		     	 <volist name='vlist' id='v'>
+			        <li>
+			          <a href="javascript:;">
+			            <i></i>
+			            <h1 style="color:{$v.color}" title="{$v.title}" onclick="location.href='<php>echo get_content_url($v[itemid],$v[cid],1);</php>'">{$v.title}</h1>
+			            <qiqi:type typeid="$v['cid']">
+			            	<span onclick="location.href='{$type.url}'" title="{$type.name}">{$type.name}</span>
+			            </qiqi:type>
+			          </a>
+			        </li>
+		       	</volist>
+		       	<if condition="empty($vlist)">
+		       		{:L('_L_S_NOL')}{$keyword}{:L('_L_S_NOR')}
+		       	</if>
+		      </ul>
+		      {$page}
+			  </div>
+			  <div class="clear"></div>
+			</div>
+</section>
+<include file="Public:footer" />

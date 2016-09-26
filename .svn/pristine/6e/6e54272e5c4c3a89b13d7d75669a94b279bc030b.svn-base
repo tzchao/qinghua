@@ -1,0 +1,40 @@
+<?php
+/**
+ * ----------------------------------------------------
+ * 自定义函数
+ * $author luffy GUO$
+ * $Id: zh-cn.php 2016-06-15 10:15 by luffy $
+ * ----------------------------------------------------
+ */
+
+	/**
+	 * 根据栏目ID获取顶级栏目ID
+	 */
+	function getTopCatid($catid = 1){
+		$catid = intval($catid);
+		if($catid == 0){
+			return $catid;
+		}
+		$category = M('Category')->where(array('id'=>"$catid"))->field('pid')->find();
+		if($category['pid'] != '0'){
+			$category['pid'] =  getTopCatid($category['pid']);
+		}
+		else{
+			$category['pid'] = $catid;
+		}
+		return $category['pid'];
+	}
+
+	/**
+	 * 根据栏目ID获取上级栏目ID
+	 */
+	function getParentCatid($catid = 1){
+		$catid = intval($catid);
+		if($catid == 0){
+			return $catid;
+		}
+		$category = M('Category')->where(array('id'=>"$catid"))->field('pid')->find();
+		return $category['pid'];
+	}
+	
+?>

@@ -1,0 +1,14 @@
+<!-- 内页banner -->
+<div class="ny-banner">
+	<qiqi:type typeid="$pid">
+			<img src="<if condition="empty($type['catpic'])">__PUBLIC__/qh_images/ny-banner1.jpg<else />{$type.catpic}</if>" class="img-responsive" alt="">
+		</qiqi:type>
+</div>
+
+<!-- 内页主内容 -->
+<div class="ny-main container">
+	<!--左侧栏-->
+	<include file="Menu:left" />
+	<!-- 主体内容右侧 -->
+	<include file="Menu:news_show" />
+</div>

@@ -1,0 +1,23 @@
+<div class="cont-right">
+    <!--发展历程-->
+    <div class="column-tit"><i></i>{$cate.name}
+    </div>
+    <ul class="teacher">
+    	<qiqi:list typeid="$cid" limit="100" field="id,title,color,zhiwu,zhicheng,yjfx,ename,jumpurl,cid,litpic" orderby="listorder ASC,id DESC">
+	       <li>
+	         <div class="box">
+	           <a href="{$list.url}" class="trans-hover pic"><img src="<if condition="empty($list['litpic'])">__PUBLIC__/qh_images/nopic_z.png<else />{$list.litpic}</if>" class="img-responsive trans" alt=""></a>
+	           <div class="desc">
+	             <h2 class="overhidden" title="{$list.title}" style="color:{$list.color};cursor: pointer;" onclick="location.href='{$list.url}'">{$list.title}</h2>
+	             
+	             <!-- <p class="overhidden" title="{$list.zhiwu}">{:L('_L_ZHIWU')}：{$list.zhiwu}</p> -->
+	             <!-- <p class="overhidden">{:L('_L_YJFX')}：{$list.yjfx}</p> -->
+	           </div>
+	           <a href="{$list.url}" class="more">{:L('_L_MOREDES')}></a>
+	         </div>
+	       </li>
+       </qiqi:list>
+       <if condition="count($list) EQ 0"><p class="indent-2">{:L('_L_NOCONTENT')}</p></if>
+     </ul>
+  </div>
+  <div class="clear"></div>

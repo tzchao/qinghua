@@ -1,0 +1,16 @@
+<include file="Public:meta" />
+<include file="Public:header" />
+<!-- 网站主题 -->
+<section>
+	<!-- 导航开始 -->
+	<include file="Public:navbar" />
+	<!-- 内页banner -->
+	<div class="ny-banner">
+		<qiqi:type typeid="$pid">
+			<img src="<if condition="empty($type['catpic'])">__PUBLIC__/qh_images/ny-banner1.jpg<else />{$type.catpic}</if>" class="img-responsive" alt="">
+		</qiqi:type>
+	</div>
+	<!-- 内容主体 -->
+	<include file="Teacher:show" />
+</section>
+<include file="Public:footer" />

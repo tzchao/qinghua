@@ -1,0 +1,21 @@
+<include file="Public:meta" />
+<include file="Public:header" />
+<!-- 网站主题 -->
+<section>
+	<!-- 导航开始 -->
+	<include file="Public:navbar" />
+	<!-- 首页轮播 -->
+	<include file="Index:lunbo" />
+	<!-- 首页主题 -->
+	<include file="Index:main" />
+</section>
+<include file="Public:footer" />
+<script type="text/javascript">
+    setTimeout(function(){
+        jQuery(".lunbo .lunboul li").first().before( jQuery(".lunbo .lunboul li").last() );
+        jQuery(document).ready(function(){ jQuery(this).find(".arrow").stop(true,true).fadeIn(300) },function(){ jQuery(this).find(".arrow").fadeOut(300) });
+        jQuery(".lunbo").slide({ titCell:".lunbolist ul",mainCell:".lunboul ul",effect:"leftLoop",autoPlay:true,vis:3,autoPage:true, trigger:"click",delayTime:600,interTime:3500});
+    },100);
+    /* 轮播广告 */
+    TouchSlide({ slideCell:"#lunbo1", titCell:".lunbolist1", mainCell:".lunbouli1", effect:"leftLoop", delayTime:1000, interTime:3500, autoPage:true, autoPlay:true});
+</script>

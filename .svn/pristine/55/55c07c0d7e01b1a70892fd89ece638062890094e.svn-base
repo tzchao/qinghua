@@ -1,0 +1,40 @@
+<!-- 底部信息 -->
+<div class="width marginTop50">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 footerLeft">
+                <ul>
+                    <li><a href="#"><img src="__PUBLIC__/qh_images/footerimg1.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="__PUBLIC__/qh_images/footerimg2.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="__PUBLIC__/qh_images/footerimg3.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="__PUBLIC__/qh_images/footerimg4.jpg" alt=""/></a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 footerRight">
+                <div class="footerRightcon">
+                    <div class="footerRight1">
+                        <qiqi:sitetitle/><br/>联系电话： <qiqi:phone /><br/>传真：<qiqi:fax /><br/>E-mail：<qiqi:email /><br/>地址：<qiqi:address />
+                    </div>
+                    <div class="footerRight2"><img src="__PUBLIC__/qh_images/erweima.jpg" alt=""/></div>
+                    <div class="footerRight3">
+                        <a href="" class="footerRight3icon1"></a>
+                        <a href="" class="footerRight3icon2"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="width footercon">
+    <div class="container">
+        <qiqi:copyright />
+    </div>
+</div>
+<!-- 统计代码 -->
+<qiqi:stats />
+<script type="text/javascript" src="__PUBLIC__/qh_js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/qh_js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="__PUBLIC__/qh_js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="__PUBLIC__/qh_js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/qh_js/publicJS.js"></script>
+</body></html>

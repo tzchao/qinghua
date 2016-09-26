@@ -1,0 +1,77 @@
+<div class="ny-main container">
+  <!--教师详情页-->
+  <div class="techer-cont">
+    <div class="info">
+      <div class="pic"><img src="{$content.litpic}" class="img-responsive"></div>
+      <div class="desc">
+        <h2>{$title}</h2>
+        <p>{$content.shorttitle}</p>
+        <h3 class="tech-tit">{:L('_L_LIANXI')}</h3>
+        <div class="xinxi">
+          <span class="name">{:L('_L_S_NAME')}：{$title}</span>
+          <span class="phone">{:L('_L_S_PHONE')}： {$content.phone}</span>
+          <span class="mail">{:L('_L_S_EMAIL')}：{$content.email}</span>
+          <span class="chuanz">{:L('_L_S_FAX')}：{$content.fax}</span>
+          <span class="addr">{:L('_L_S_ADDRESS')}：{$content.address}</span>
+          <span class="user">{:L('_L_S_HOME')}： <if condition="empty($content['home'])"><else /><a href="{$content.home}" target="__blank">{$content.home}</a></if> </span>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    <div class="jianjie miaoshu">
+      <h3 class="tech-tit">{:L('_L_S_DES')}</h3>
+      <p>{$description|nl2br=###}</p>
+    </div>
+    <if condition="!empty($content['shjl'])">
+	    <div class="jiangli miaoshu">
+	      <h3 class="tech-tit">{:L('_L_S_SHJL')}</h3>
+	      {$content.shjl|nl2br=###}
+	    </div>
+    </if>
+    <if condition="!empty($content['jybe'])">
+	    <div class="eduit miaoshu">
+	      <h3 class="tech-tit">{:L('_L_S_JYBJ')}</h3>
+	      {$content.jybe|nl2br=###}
+	    </div>
+	</if>
+    <if condition="!empty($content['gzjl'])">
+	    <div class="job miaoshu">
+	      <h3 class="tech-tit">{:L('_L_S_GZJL')}</h3>
+	     {$content.gzjl|nl2br=###}
+	    </div>
+	</if>
+    <if condition="!empty($content['jske'])">
+	    <div class="lesson miaoshu">
+	      <h3 class="tech-tit">{:L('_L_S_JSKC')}</h3>
+	       {$content.jske|nl2br=###}
+	    </div>
+	</if>
+    <if condition="!empty($content['xspy'])">
+	    <div class="student miaoshu">
+	      <h3 class="tech-tit">{:L('_L_S_XSPY')}</h3>
+	      {$content.xspy|nl2br=###}
+	    </div>
+	</if>
+    <if condition="!empty($content['yjxq'])">
+	    <div class="xingqu miaoshu">
+	      <h3 class="tech-tit">{:L('_L_S_YJXQ')}</h3>
+	      {$content.yjxq|nl2br=###}
+	    </div>
+	</if>
+    <if condition="!empty($content['kyxm'])">
+	    <div class="keyan miaoshu">
+	      <h3 class="tech-tit">{:L('_L_S_KYXM')}</h3>
+	      {$content.kyxm|nl2br=###}
+	    </div>
+	 </if>
+	 <if condition="!empty($content['content'])">
+	 	<div class="keyan miaoshu">
+	      <h3 class="tech-tit">{:L('_L_S_CONTENT')}</h3>
+	      {$content.content}
+	    </div>
+	 </if>
+  </div>
+
+</div>

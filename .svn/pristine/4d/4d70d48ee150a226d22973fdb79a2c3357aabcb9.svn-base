@@ -1,0 +1,22 @@
+<!-- 轮播 -->
+<div class="lunbo hidden-xs" id="lunbo">
+    <div class="lunboul">
+        <ul>
+        	<qiqi:abc id='1' limit='3'>
+        		<li><a href="{$abc.url}"><img src="{$abc.content}" alt="{$abc.title}"/></a></li>
+        	</qiqi:abc>
+        </ul>
+    </div>
+    <span class="lunboLeft"></span>
+    <span class="lunboRight"></span>
+    <a class="pnBtn prev" href="javascript:void(0)"></a>
+    <a class="pnBtn next" href="javascript:void(0)"></a>
+</div>
+<div class="lunbo1 visible-xs-block" id="lunbo1">
+    <ul class="lunbouli1">
+       <qiqi:abc id='1' limit='3'>
+        	<li><a href="{$abc.url}"><img src="{$abc.content}" alt="{$abc.title}"/></a></li>
+        </qiqi:abc>
+    </ul>
+    <ul class="lunbolist1"></ul>
+</div>

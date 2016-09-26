@@ -1,0 +1,10 @@
+<include file="Public:meta" />
+<include file="Public:header" />
+<!-- 网站主题 -->
+<section>
+	<!-- 导航开始 -->
+	<include file="Public:navbar" />
+	<!-- 内容主体 -->
+	<include file="Main:page" />
+</section>
+<include file="Public:footer" />

@@ -1,0 +1,8 @@
+<div class="cont-right">
+    <!--发展历程-->
+    <div class="column-tit"><i></i>{$title}<span class="date">{$content.publishtime|date='Y.m.d',###}	<span style="display:none;"> <qiqi:click /></span></span></div>
+    <div class="content">
+       {$content.content}
+    </div>
+  </div>
+<div class="clear"></div>

@@ -1,0 +1,45 @@
+<div class="cont-right">
+    <!--发展历程-->
+    <div class="column-tit"><i></i>{$cate.name}</div>
+    <div class="content">
+      <p></p>
+     <if condition="empty($cate['description'])">{:L('_L_CATNODES')}</if>{$cate.description|nl2br=###}
+      <p></p>
+    </div>
+    <ul class="yanjiu">
+    	<qiqi:list typeid='$cid' field="id,title,ename,jumpurl,cid,litpic,shorttitle" flag="e" pagesize='16' orderby="listorder ASC,id DESC">
+	      <li>
+	        <div class="pic">
+	          <img src="<if condition="empty($list['litpic'])">__PUBLIC__/qh_images/nopic_l.png<else />{$list.litpic}</if>" class="img-responsive" alt="">
+	          <a href="{$list.url}">
+	            <h2>{$list.title}</h2>
+	            <p>{$list.shorttitle}</p>
+	          </a>
+	        </div>
+	      </li>
+	   </qiqi:list>
+    </ul>
+    {$page}
+    <div class="tabbable" id="tabs-385804">
+      <ul class="nav nav-tabs">
+      	<php>$kk = 1;</php>
+         <qiqi:list typeid='$cid' field="id,title,color,jumpurl,cid,litpic" flag="c" limit="10" orderby="listorder ASC,id DESC">
+	        <li class="<eq name='kk' value='1'>active</eq>">
+	          <a href="#panel-{$list.id}" data-toggle="tab">{$list.title}</a>
+	          <php>$kk++;</php>
+	        </li>
+	     </qiqi:list>
+      </ul>
+      <div class="tab-content">
+      		<php>$kk = 1;</php>
+		     <other:list typeid='$cid' field="id,title,color,jumpurl,cid,litpic,content" flag="c" limit="10" orderby="listorder ASC,id DESC">
+			       <div class="tab-pane <eq name='kk' value='1'>active</eq>" id="panel-{$list.id}">
+			          {$list.content}
+			        </div>
+			        <php>$kk++;</php>
+		    </other:list>
+      </div>
+    </div>
+
+  </div>
+  <div class="clear"></div>

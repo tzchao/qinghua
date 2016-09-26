@@ -1,0 +1,45 @@
+<!-- 底部信息 -->
+<div class="width marginTop50">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 footerLeft">
+                <ul>
+                	<qiqi:ad id='5' />
+                </ul>
+            </div>
+            <div class="col-md-6 footerRight">
+                <div class="footerRightcon">
+                    <div class="footerRight1">
+                        <qiqi:sitetitle/><br/>{:L('_L_I_LXDH')}： <qiqi:phone /><br/>{:L('_L_I_FAX')}：<qiqi:fax /><br/>{:L('_L_I_EMAIL')}：<qiqi:email /><br/>{:L('_L_I_ADDRESS')}：<qiqi:address />
+                    </div>
+                    <qiqi:abc id='6' limit='1'>
+                    	<div class="footerRight2"><img src="{$abc.content}" alt="<qiqi:sitetitle/>"/></div>
+                    </qiqi:abc>
+                    <div class="footerRight3">
+                    	<php>$i = 1;</php>
+                    	<qiqi:abc id='7' limit='2'>
+                        	<a href="{$abc.url}" title="{$abc.content}" target="__blank" class="footerRight3icon{$i}"></a>
+                        	<php>$i++;</php>
+                        </qiqi:abc>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="width footercon">
+    <div class="container">
+        <qiqi:copyright />
+    </div>
+</div>
+<!-- 统计代码 -->
+<qiqi:stats />
+<script type="text/javascript" src="__PUBLIC__/qh_js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/qh_js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="__PUBLIC__/qh_js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="__PUBLIC__/qh_js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/qh_js/publicJS.js"></script>
+
+<!-- QQ客服 -->
+<qiqi:online />
+</body></html>

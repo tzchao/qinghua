@@ -1,0 +1,12 @@
+<div class="menu-left">
+	<qiqi:type typeid="$pid">
+		<div class="column-tit">{$type.name}</div>
+	</qiqi:type>
+		<div class="box">
+			<qiqi:catlist typeid='$pid' flag='1'>
+				<div class="menu-li menu-erji">
+					<span <if condition="$catlist['id'] eq $cid">class="cur"</if>><i></i><a href="{$catlist.url}">{$catlist.name}</a></span>
+				</div>
+			</qiqi:catlist>
+		</div>
+	</div>
